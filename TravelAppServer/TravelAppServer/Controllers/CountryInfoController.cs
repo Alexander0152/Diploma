@@ -5,6 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using TravelAppServer.Models;
 
+using System.IO;
+using TravelAppServer.Entities;
+using System.Text.Json;
+using Newtonsoft.Json;
+
 namespace TravelAppServer.Controllers
 {
     [ApiController]
@@ -39,7 +44,20 @@ namespace TravelAppServer.Controllers
             return result;
         }
 
-        // GET api/users/5
+        [HttpGet("pageinfo/{countryName}")]
+        public async Task<ActionResult<CountryPageInfo>> Get(string countryName)
+        {
+            StreamReader openStream = new StreamReader(@"c:\Diploma\TravelAppServer\TravelAppServer\data\countryInfo.json");
+            string json = openStream.ReadToEnd();
+            CountryPageInfo pageInfo = JsonConvert.DeserializeObject<CountryPageInfo>(json);
+            //var result = JsonConvert.SerializeObject(pageInfo);
+
+           // if (result == null)
+           //     return NotFound();
+
+            return new ObjectResult(pageInfo);
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<CountryInfo>> Get(int id)
         {

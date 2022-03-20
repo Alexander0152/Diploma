@@ -71,8 +71,6 @@ C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.Diagno
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csprojAssemblyReference.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.AssemblyInfoInputs.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.AssemblyInfo.cs
-C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CoreCompileInputs.cache
-C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.MvcApplicationPartsAssemblyInfo.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.RazorTargetAssemblyInfo.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CopyComplete
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\staticwebassets\TravelAppServer.StaticWebAssets.Manifest.cache
@@ -80,3 +78,7 @@ C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\staticwebasse
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.dll
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.pdb
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.genruntimeconfig.cache
+C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\data\countryInfo.json
+C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CoreCompileInputs.cache
+C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.MvcApplicationPartsAssemblyInfo.cache
