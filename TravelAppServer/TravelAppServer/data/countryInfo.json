@@ -344,52 +344,346 @@
       }
     },
     {
-      "name": "France",
-      "capital": "Paris",
+      "name": "Greece",
+      "capital": "Athens",
       "titleImages": [
-        "https://alexander0152.github.io/travelData/assets/France/France_intro1.jpg",
-        "https://alexander0152.github.io/travelData/assets/France/France_intro2.jpg"
+        "https://alexander0152.github.io/travelData/assets/Greece/Greece_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Greece/Greece_intro2.jpg"
       ],
-      "countryInfo": "France is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about France: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
-      "videoLink": "https://www.youtube.com/embed/BHdIQy00_p4",
+      "countryInfo": "Greece is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Greece: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/RSRKFAmfqnI",
       "slides": [
         {
-          "original": "https://alexander0152.github.io/travelData/assets/France/France1.jpg",
-          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France1.jpg",
-          "description": ""
+          "original": "https://alexander0152.github.io/travelData/assets/Greece/Greece1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Greece/Greece1.jpg",
+          "description": "Set in the northeast of the country, Western Thrace is so named because it lies next to Eastern Thrace, which is part of Turkey. Also lying next to Bulgaria, it has a unique mix of cultures and religions; its strategic location means that there are lots of interesting archaeological sites and old buildings, dating back to the Ancient Greeks, the Byzantines, and the Ottomans."
         },
         {
-          "original": "https://alexander0152.github.io/travelData/assets/France/France2.jpg",
-          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France2.jpg",
-          "description": ""
+          "original": "https://alexander0152.github.io/travelData/assets/Greece/Greece2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Greece/Greece2.jpg",
+          "description": "The largest region in the whole of Greece, Macedonia encompasses much of the northern realms of the country. It is bursting with incredible mountain scenery, stunning beaches, and fascinating historic cities and towns. It is in this part of Greece that most of the ancient kingdom of Macedon was once found, so as you travel around, you’ll find many monuments to Alexander the Great."
         },
         {
-          "original": "https://alexander0152.github.io/travelData/assets/France/France3.jpg",
-          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France3.jpg",
-          "description": ""
+          "original": "https://alexander0152.github.io/travelData/assets/Greece/Greece3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Greece/Greece3.jpg",
+          "description": "Home to a diverse array of landscapes, Thessaly is bordered by the Pindus mountain range to the west. Its two principal cities of Trikala and Larissa are located on a low-lying plain that leads to coastal mountains at Ossa and Pelion, as well as the glimmering Aegean Sea."
         },
         {
-          "original": "https://alexander0152.github.io/travelData/assets/France/France4.jpg",
-          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France4.jpg",
-          "description": ""
+          "original": "https://alexander0152.github.io/travelData/assets/Greece/Greece4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Greece/Greece4.jpg",
+          "description": "Lying between the Pindus mountain range and the Ionian Sea, Epirus borders Albania in the northwest of Greece. Most of its territory is covered in mountains and forests, with the Vjose and Acheron rivers running through it, and dramatic valleys and gorges to explore, such as the spectacular Vikos Gorge."
         },
         {
-          "original": "https://alexander0152.github.io/travelData/assets/France/France5.jpg",
-          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France5.jpg",
-          "description": ""
+          "original": "https://alexander0152.github.io/travelData/assets/Greece/Greece5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Greece/Greece5.jpg",
+          "description": "Central Greece is bordered on three sides by water; the Ionian Sea lies to its west, the Corinthian Gulf to its south, and the Aegean Sea to its east. Despite its long coastline, the region is very mountainous, with a number of peaks looming to over 2,000 meters. Many gleaming lakes and gurgling rivers can be found hidden away in its picturesque countryside."
         },
         {
-          "original": "https://alexander0152.github.io/travelData/assets/France/France6.jpg",
-          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France6.jpg",
-          "description": ""
+          "original": "https://alexander0152.github.io/travelData/assets/Greece/Greece6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Greece/Greece6.jpg",
+          "description": "Home to the nation’s capital, Attica is the most populous region in the country. While Athens, with its monuments, museums and mesmerizing historical sights is the undoubted highlight of the area, there are a wealth of other great things for you to see and do."
         }
       ],
       "mapData": {
         "center": [
-          149.125529,
-          -35.306904
+          23.726110,
+          37.970833
         ],
-        "countryCode": "FRA"
+        "countryCode": "GRC"
+      }
+    },
+    {
+      "name": "Italy",
+      "capital": "Rome",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Italy/Italy_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Italy/Italy_intro2.jpg"
+      ],
+      "countryInfo": "Italy is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Italy: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/2b2gJu-g3qE",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Italy/Italy1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Italy/Italy1.jpg",
+          "description": "Lying in the central part of Italy, Abruzzo is awash with beautiful nature; remarkably, almost half its landmass is set aside as national parks and nature reserves. As such, it really is a nature lover’s dream. There are loads of great outdoor activities on offer, with hiking, rock climbing and skiing all very popular."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Italy/Italy2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Italy/Italy2.jpg",
+          "description": "Located high in the Alps and bordering both France and Switzerland, Aosta Valley may be the smallest region in Italy, but it certainly packs a punch when it comes to incredible sights."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Italy/Italy3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Italy/Italy3.jpg",
+          "description": "Covering Italy’s ‘heel,’ Apulia is the most southeastern region in the country, and is blessed with a warm and inviting climate that makes it a very popular holiday destination."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Italy/Italy4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Italy/Italy4.jpg",
+          "description": "Often overlooked by visitors to southern Italy, who instead head to neighboring Calabria and Apulia (Italy’s ‘toe’ and ‘heel’), Basilicata is certainly worth checking out for all that it has to offer.\n\nAs a third of the region is made up of nature reserves and national parks, there is a lot of lovely scenery to discover. The natural wonders are varied, with the verdant and more mountainous interior contrasting starkly with the arid, wild coastline. "
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Italy/Italy5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Italy/Italy5.jpg",
+          "description": "Blessed with a bewitchingly beautiful coastline, Calabria’s stunning scenery will set your heart racing. Italy’s ‘toe’ is bordered by the Tyrrhenian Sea to the west and the Ionian Sea to the east. "
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Italy/Italy6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Italy/Italy6.jpg",
+          "description": "Campania truly is a delight to visit. In addition to its breathtaking scenery and fantastic historical sights, it also boasts the idyllic islands of Capri and Ischia for you to enjoy."
+        }
+      ],
+      "mapData": {
+        "center": [
+          12.496366,
+          41.902782
+        ],
+        "countryCode": "ITA"
+      }
+    },
+    {
+      "name": "Japan",
+      "capital": "Tokyo",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Japan/Japan_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Japan/Japan_intro2.jpg"
+      ],
+      "countryInfo": "Japan is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Japan: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/G5RpJwCJDqc",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Japan/Japan1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Japan/Japan1.jpg",
+          "description": "More sparsely populated than any other part of the country, Japan’s northernmost island of Hokkaido is a nature lover’s dream; its wild and untouched landscapes are home to six incredible national parks for you to explore."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Japan/Japan2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Japan/Japan2.jpg",
+          "description": "Covering the northeastern part of Honshu – the main island in Japan – Tohoku is home to some of the most spectacular scenery in the country. Tucked away amongst its rural landscapes, you can find wonderful castles, shrines, samurai residences, and hot springs."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Japan/Japan3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Japan/Japan3.jpg",
+          "description": "Although Tokyo, the world’s largest metropolis, understandably dominates Kanto with all that it has for visitors to see and do, the region actually has a lot to offer up alongside Japan’s futuristic and bustling capital city."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Japan/Japan4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Japan/Japan4.jpg",
+          "description": "Covering the central region of Honshu, Chubu is home to the largest chain of mountains in the country – the Japan Alps – as well as Mount Fuji, one of the most iconic images and symbols of Japan."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Japan/Japan5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Japan/Japan5.jpg",
+          "description": "Complete with a stunning array of historical and cultural landmarks in the shape of their many shrines, temples, and palaces, the cities of Asuka, Nara, and Kyoto are all exceptional places to visit. Yet more incredible sights can be seen in the castles at Hikone and Himeji and the wonderful hot springs at Arima Onsen."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Japan/Japan6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Japan/Japan6.jpg",
+          "description": "Making up the most southwestern point of Honshu, Chugoku is a mostly rural region. Although it is usually overlooked by visitors to Japan, it does boast an impressive array of castles, gardens, temples, and shrines for you to enjoy, with lots of lovely nature also on show."
+        }
+      ],
+      "mapData": {
+        "center": [
+          139.839478,
+          35.652832
+        ],
+        "countryCode": "JPN"
+      }
+    },
+    {
+      "name": "Mexico",
+      "capital": "Mexico",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Mexico/Mexico_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Mexico/Mexico_intro2.jpg"
+      ],
+      "countryInfo": "Mexico is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Mexico: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/n8HTyJPXVug",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico1.jpg",
+          "description": "Nestled amidst the soaring Sierra Blanca mountains, Ruidoso is a peaceful and picturesque place that has a lot going for it. Despite its smallish size, the scenic, secluded resort town boasts an array of outdoor activities with a casino, ski slopes and top-class horse racing at the nearby Native American reservation."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico2.jpg",
+          "description": "Often ranked among the best places to live in New Mexico, the charming Corrales lies alongside the Rio Grande in between Albuquerque and Santa Fe. Due to its proximity to the two large cities, residents of the rural village can enjoy a calmer pace of life without sacrificing much in the way of dining, shopping and entertainment."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico3.jpg",
+          "description": "If instead of farming techniques and fine wines it is aliens and UFOs that you are interested in, then, Roswell in the southeast of the state may be the place for you. Since the infamous Roswell incident of 1947 it has attained a quirky sort of notoriety with lots of alien and spacecraft-themed attractions and establishments."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico4.jpg",
+          "description": "While most people solely associate the small city with the spectacular Carlsbad Caverns National Park, the town actually has much more going for it than first meets the eye. Besides being very affordable and having a low unemployment rate, nearby scenic nature spots like the Guadalupe Mountains, Lincoln National Forest and Sitting Bull Falls offer all kinds of epic outdoor activities."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico5.jpg",
+          "description": "The largest city in New Mexico, Albuquerque has almost everything you could ever want in terms of attractions, activities and entertainment options. Although oft-overlooked, the vibrant metropolis has a rich and diverse history and heritage with Spanish and Native American cultural influences on show in its attractive adobe Old Town."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Mexico/Mexico6.jpg",
+          "description": "Bordered by not only the striking Sacramento Mountains and lovely Lincoln National Forest but the wonderful White Sands National Park too, Alamogordo is sure to appeal to nature lovers and outdoor aficionados alike. Aside from its spellbinding scenery and amazing outdoor activities, cheap housing and short commutes make the small city an increasingly popular spot to settle down."
+        }
+      ],
+      "mapData": {
+        "center": [
+          -99.133209,
+          19.432608
+        ],
+        "countryCode": "MEX"
+      }
+    },
+    {
+      "name": "Russia",
+      "capital": "Moscow",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Russia/Russia_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Russia/Russia_intro2.jpg"
+      ],
+      "countryInfo": "Russia is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Russia: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/YrNxPr4PKQo",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Russia/Russia1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Russia/Russia1.jpg",
+          "description": "Central Russia makes up the historic heart and homeland of the country. It is here in the extreme west of Russia bordering Europe that you’ll find its glittering capital Moscow."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Russia/Russia2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Russia/Russia2.jpg",
+          "description": "Bordering both Scandinavia and the Baltic countries, Northwestern Russia is home to a vast array of different landscapes. Endless forests, glimmering lakes, and lively cities give way to remote, desolate lands and the freezing world of the Arctic wastelands."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Russia/Russia3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Russia/Russia3.jpg",
+          "description": "With the Black Sea lying to one side of it and the Caspian Sea to the other, Southern Russian is a fascinating place to visit, as the mountain ranges in its south are full of different people, cultures, and customs. Elista, for example, is a fantastic city to visit; it boasts a number of Buddhist monasteries and is the capital of the only Buddhist region in Europe."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Russia/Russia4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Russia/Russia4.jpg",
+          "description": "Bordering Georgia and Azerbaijan, the North Caucasian region is an exhilarating place to visit. Its many mountains, valleys, and gorges are home to nearly 50 different ethnic groups, each with their own distinct language, culture, and customs."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Russia/Russia5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Russia/Russia5.jpg",
+          "description": "Mostly made up of the Volga Basin and centered around the river of the same name, this wonderful region is home to some of Russia’s most important cities, and acts as the industrial heartland of the country."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Russia/Russia6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Russia/Russia6.jpg",
+          "description": "Separating east from west, the region is named after the Ural Mountains that run through it and stretch all the way from the Arctic Circle right down to Kazakhstan. As they pass through various geographic zones, the landscapes on show are very diverse. While most of the mountains are forested, other parts are full of glittering lakes and rivers, while yet others are home to steep cliffs and gorgeous gorges."
+        }
+      ],
+      "mapData": {
+        "center": [
+          37.618423,
+          55.751244
+        ],
+        "countryCode": "RUS"
+      }
+    },
+    {
+      "name": "Switzerland",
+      "capital": "Bern",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland_intro2.jpg"
+      ],
+      "countryInfo": "Switzerland is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Switzerland: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/kVxTrhojpFI",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland1.jpg",
+          "description": "While many visitors are drawn almost instinctively to Geneva and its list of fabulous sights such as the famous Jet d’Eau and its marvellous Old Town, the rest of the Lake Geneva Region is awash with beautiful nature for you to discover and so it is definitely worth venturing further afield."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland2.jpg",
+          "description": "Located in the northwestern part of the country, the Jura Region has a wide variety of different landscapes for you to explore with mountains and valleys lying side-by-side with sparkling lakes and flower-filled meadows."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland3.jpg",
+          "description": "While the capital of the country Bern is undoubtedly the main draw in the region with its magnificent Old Town, there are also a number of lovely spa towns such as Baden and Schinznach-Bad for you to check out as well as quaint little rural villages and communities."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland4.jpg",
+          "description": "The Bernese Highlands as they are known in English could not be more different from the Bernese Lowlands as the region is home to some of the tallest, most famous and indeed iconic peaks in the country."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland5.jpg",
+          "description": "Located right on the border with France and Germany, Northwestern Switzerland is dominated by the city of Basel which has an amazing medieval old town centre for you to explore alongside lots of great museums, contemporary architecture and historical landmarks. In addition to this, it also makes for a fantastic base if you want to visit the Jura Mountains or the Black Forest in Germany and Alsace in France."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Switzerland/Switzerland6.jpg",
+          "description": "Located on a stunning lake of the same name, the charming city of Lucerne is just one of the most popular tourist destinations that it has to boast of and from here you can hike to the top of a number of amazing mountains with the views from atop of Mount Pilatus, Mount Rigi and Mount Titlis all being equally beautiful to behold."
+        }
+      ],
+      "mapData": {
+        "center": [
+          7.451123,
+          46.947456
+        ],
+        "countryCode": "CHE"
+      }
+    },
+    {
+      "name": "UK",
+      "capital": "London",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/UK/UK_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/UK/UK_intro2.jpg"
+      ],
+      "countryInfo": "UK is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about UK: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/0kXCPo7c63I",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/UK/UK1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/UK/UK1.jpg",
+          "description": "Located in north west England in the county of Cumbria, the Lake District is the second largest National Park in the UK. The main attractions are the lakes, mountains and hills carved by glacial erosion and providing dramatic and inspiring scenery. It is England’s premier destination for hiking and climbing. Among the most popular places to visit in the United Kingdom, the park is visited by about 14 million tourists each year."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/UK/UK2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/UK/UK2.jpg",
+          "description": "Snowdonia is an awesome national park. There is simply no other way to describe the stunning 360-degree views of the mountains, valleys and coast below. On a clear day, visitors can even see Ireland. Located along the coast of Wales, Snowdonia is home to Snowdon, the highest mountain in Wales and England, and the largest lake in Wales. It is the third largest national park in the United Kingdom."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/UK/UK3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/UK/UK3.jpg",
+          "description": "Not far from the border with Wales, the city of Chester lies on the River Dee in Cheshire, England. The city is more than 2,000 years old, which means there is plenty of history, culture and architecture on hand spanning several eras. Distinctive 19th century black-and-white revival architecture can be found throughout the city."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/UK/UK4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/UK/UK4.jpg",
+          "description": "Cornwall is a study in contrasts. It is charming and quaint, yet rugged and isolated. Located in the westernmost point of the United Kingdom, Cornwall is a peninsula that offers rocky cliffs overlooking the sea on its northern side and golden sand beaches that are loved by tourists on the south."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/UK/UK5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/UK/UK5.jpg",
+          "description": "York is a walled city with a rich heritage located where the River Foss meets the River Ouse. An impressive number of attractions are packed into the space of this ancient city. York is just a two-hour train ride away from London."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/UK/UK6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/UK/UK6.jpg",
+          "description": "The Scottish Highlands is the rugged northern and northwestern portion of Scotland. This is the Scotland conjured up by visions of tartan, kilts, lochs and Braveheart. The area is very sparsely populated, with many mountain ranges dominating the region, and includes the highest mountain in Britain, Ben Nevis."
+        }
+      ],
+      "mapData": {
+        "center": [
+          -0.118092,
+          51.509865
+        ],
+        "countryCode": "GBR"
       }
     }
   ]

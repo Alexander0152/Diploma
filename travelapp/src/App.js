@@ -162,7 +162,7 @@ function App() {
                                 </Fade>
                             </div>
                         </div>
-                    </section>`
+                    </section>
                     <section className="cards">
                         <div className="panel_sort">
                             <button className="btn btn-info btn_sort" onClick={() => sortByRating()}>Sort by rating
@@ -179,13 +179,20 @@ function App() {
                         </div>
                     </section>
                 </Route>
-                <Route exact path="/USA" component={() => <CountryPage country={cards[13]}/>}/>
                 <Route exact path="/Australia" component={() => <CountryPage country={cards[0]}/>}/>
                 <Route exact path="/Brazil" component={() => <CountryPage country={cards[1]}/>}/>
                 <Route exact path="/Canada" component={() => <CountryPage country={cards[2]}/>}/>
                 <Route exact path="/Egypt" component={() => <CountryPage country={cards[3]}/>}/>
                 <Route exact path="/France" component={() => <CountryPage country={cards[4]}/>}/>
                 <Route exact path="/Germany" component={() => <CountryPage country={cards[5]}/>}/>
+                <Route exact path="/Greece" component={() => <CountryPage country={cards[6]}/>}/>
+                <Route exact path="/Italy" component={() => <CountryPage country={cards[7]}/>}/>
+                <Route exact path="/Japan" component={() => <CountryPage country={cards[8]}/>}/>
+                <Route exact path="/Mexico" component={() => <CountryPage country={cards[9]}/>}/>
+                <Route exact path="/Russia" component={() => <CountryPage country={cards[10]}/>}/>
+                <Route exact path="/Switzerland" component={() => <CountryPage country={cards[11]}/>}/>
+                <Route exact path="/UK" component={() => <CountryPage country={cards[12]}/>}/>
+                <Route exact path="/USA" component={() => <CountryPage country={cards[13]}/>}/>
                 <footer>
                     <div class="wrapper">
                         <div class="content">
