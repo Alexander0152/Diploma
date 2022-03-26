@@ -50,12 +50,15 @@ namespace TravelAppServer.Controllers
             StreamReader openStream = new StreamReader(@"c:\Diploma\TravelAppServer\TravelAppServer\data\countryInfo.json");
             string json = openStream.ReadToEnd();
             CountryPageInfo pageInfo = JsonConvert.DeserializeObject<CountryPageInfo>(json);
-            //var result = JsonConvert.SerializeObject(pageInfo);
 
-           // if (result == null)
-           //     return NotFound();
+            foreach (CountryPageModel country in pageInfo.country) {
+                if (country.name == countryName)
+                {
+                    return new ObjectResult(country);
+                }
+            }
 
-            return new ObjectResult(pageInfo);
+            return NotFound();
         }
 
         [HttpGet("{id}")]

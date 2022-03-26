@@ -4,43 +4,393 @@
       "name": "USA",
       "capital": "Washington",
       "titleImages": [
-        "assets/images/USA_into1.jpg",
-        "assets/images/USA_into2.jpg"
+        "https://alexander0152.github.io/travelData/assets/USA/USA_into1.jpg",
+        "https://alexander0152.github.io/travelData/assets/USA/USA_into2.jpg"
       ],
       "countryInfo": "The US currently attracts tourists with its National Parks, Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
       "videoLink": "https://www.youtube.com/embed/98H5AN_vfOY",
       "slides": [
         {
-          "original": "assets/images/USA1.jpg",
-          "thumbnail": "assets/images/USA1.jpg",
-          "description" : "The Empire State Building is a 102-story Art Deco skyscraper in Midtown Manhattan in New York City, United States. It was designed by Shreve, Lamb & Harmon and built from 1930 to 1931. Its name is derived from 'Empire State', the nickname of the state of New York. The building has a roof height of 1,250 feet (380 m) and stands a total of 1,454 feet (443.2 m) tall, including its antenna. The Empire State Building stood as the worlds tallest building until the construction of the World Trade Center in 1970."
+          "original": "https://alexander0152.github.io/travelData/assets/USA/USA1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/USA/USA1.jpg",
+          "description": "The Empire State Building is a 102-story Art Deco skyscraper in Midtown Manhattan in New York City, United States. It was designed by Shreve, Lamb & Harmon and built from 1930 to 1931. Its name is derived from 'Empire State', the nickname of the state of New York. The building has a roof height of 1,250 feet (380 m) and stands a total of 1,454 feet (443.2 m) tall, including its antenna. The Empire State Building stood as the worlds tallest building until the construction of the World Trade Center in 1970."
         },
         {
-          "original": "assets/images/USA2.jpg",
-          "thumbnail": "assets/images/USA2.jpg",
+          "original": "https://alexander0152.github.io/travelData/assets/USA/USA2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/USA/USA2.jpg",
           "description": "New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2), New York City is also the most densely populated major city in the United States. Located at the southern tip of the State of New York, the city is the center of the New York metropolitan area, the largest metropolitan area in the world by urban landmass."
         },
         {
-          "original": "assets/images/USA3.jpg",
-          "thumbnail": "assets/images/USA3.jpg",
+          "original": "https://alexander0152.github.io/travelData/assets/USA/USA3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/USA/USA3.jpg",
           "description": "Miami, officially the City of Miami, is a coastal city located in southeastern Florida in the United States. It is the third most populous metropolis on the East coast of the United States, and it is the seventh largest in the country. The city has the third tallest skyline in the U.S. with over 300 high-rises, 55 of which exceed 491 ft (150 m)."
         },
         {
-          "original": "assets/images/USA4.jpg",
-          "thumbnail": "assets/images/USA4.jpg",
+          "original": "https://alexander0152.github.io/travelData/assets/USA/USA4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/USA/USA4.jpg",
           "description": "Yellowstone National Park is an American national park located in the western United States, largely in the northwest corner of Wyoming and extending into Montana and Idaho. It was established by the U.S. Congress and signed into law by President Ulysses S. Grant on March 1, 1872. Yellowstone was the first national park in the U.S. and is also widely held to be the first national park in the world. The park is known for its wildlife and its many geothermal features, especially Old Faithful geyser, one of its most popular."
         },
         {
-          "original": "assets/images/USA5.jpg",
-          "thumbnail": "assets/images/USA5.jpg",
+          "original": "https://alexander0152.github.io/travelData/assets/USA/USA5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/USA/USA5.jpg",
           "description": "Las Vegas, officially the City of Las Vegas and often known simply as Vegas, is the 28th-most populous city in the United States, the most populous city in the state of Nevada, and the county seat of Clark County. The city anchors the Las Vegas Valley metropolitan area and is the largest city within the greater Mojave Desert. Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife."
         },
         {
-          "original": "assets/images/USA6.jpg",
-          "thumbnail": "assets/images/USA6.jpg",
+          "original": "https://alexander0152.github.io/travelData/assets/USA/USA6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/USA/USA6.jpg",
           "description": "Florida is a state located in the Southeastern region of the United States. With a population of over 21 million, Florida is the third-most populous and the 22nd-most extensive of the 50 United States. The state is bordered to the west by the Gulf of Mexico, to the northwest by Alabama, to the north by Georgia, to the east by the Atlantic Ocean, and to the south by the Straits of Florida. The states capital is Tallahassee and its most populous municipality is Jacksonville."
         }
-      ]
+      ],
+      "mapData": {
+        "center": [
+          -77.036527,
+          38.899513
+        ],
+        "countryCode": "USA"
+      }
+    },
+    {
+      "name": "Australia",
+      "capital": "Canberra",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Australia/Australia_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Australia/Australia_intro2.jpg"
+      ],
+      "countryInfo": "Australia is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Australia: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/W8M_RqBL0mQ",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Australia/Australia1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Australia/Australia1.jpg",
+          "description": "The Great Ocean Road, which is located in Victoria, is considered to be one of the most beautiful drives in Australia. This 243 km (151 mile) drive starts in Torquay, which is located about 100 km (60 miles) from Melbourne, and ends in Allansford. As it travels along Victoria’s beautiful southwest coastline, the Great Ocean Road passes by some of the most stunning scenery in Australia, including The Twelve Apostles, which are pretty limestone stack formations that rise out of the ocean near Port Campbell National Park."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Australia/Australia2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Australia/Australia2.jpg",
+          "description": "Located in Western Australia, Purnululu National Park is home to one of Australia’s most unique tourist attractions known as the Bungle Bungle Range — striking orange-and-black-striped sandstone domes that resemble huge beehives. Surprisingly, the site was known only to local Aboriginal Australians and farmers until recently. In fact, it only became famous after a documentary was made of the area in 1983."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Australia/Australia3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Australia/Australia3.jpg",
+          "description": "The Blue Mountains National Park is located in New South Wales, approximately 80 km (50 miles) west of Sydney. Its proximity to the biggest city in Australia has made this scenic park a popular day trip for both tourists and locals alike. The park is probably best known for the Three Sisters, a rock formation that towers 900 meter (3000 foot) above the Jamison Valley."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Australia/Australia4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Australia/Australia4.jpg",
+          "description": "This stunning collection of 74 islands lies in the middle of Australia’s Great Barrier Reef, making them a perfect jumping off spot for travelers looking to explore the amazing and colorful marine life that live in the waters of this area."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Australia/Australia5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Australia/Australia5.jpg",
+          "description": "Located in Australia’s Northern Territory, about three hours north of Darwin, Kakadu is the country’s largest national park. There is a lot to see in Kakadu National Park, including a large concentration of Aboriginal rock art; some of which are estimated to be up to 20,000 years old."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Australia/Australia6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Australia/Australia6.jpg",
+          "description": "One of the world’s largest monoliths, Ayers Rock is also one of the top tourist attractions in Australia. Located within the Uluru-Kata Tjuta National Park of the Northern Territory, this large sandstone formation stands more than 340 meters (1,100 feet) high."
+        }
+      ],
+      "mapData": {
+        "center": [
+          149.125529,
+          -35.306904
+        ],
+        "countryCode": "AUS"
+      }
+    },
+    {
+      "name": "Brazil",
+      "capital": "Rio",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Brazil/Brazil_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Brazil/Brazil_intro2.jpg"
+      ],
+      "countryInfo": "Brazil is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Brazil: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/1PTs1mqrToM",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil1.jpg",
+          "description": "Established in 1937, Itatiaia National Park is the oldest national park in Brazil. The park is part of the Mantiqueira mountain range, and home to some of Brazil’s highest mountains including Prateleiras and Agulhas Negras. Prateleiras is an easy climb but Agulhas Negras is a little tougher, and requires some effort, if not actual mountaineering skills."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil2.jpg",
+          "description": "This national park, in the state of Mato Grosso has natural features such as cliffs, canyons, waterfalls and caves. If you walk through the savannah, you’ll see a variety of colorful flowers and forests with many types of trees. The park is also notable or its archeological sites, including some early cave paintings."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil3.jpg",
+          "description": "Located in the southern state of Matto Grosso, this park’s dominant feature is the Cuiaba River and surrounding wetlands. In fact, this park contains the largest wetland area in the world. You are likely to see a great diversity of wildlife if you visit, including many exotic birds such as parrots, macaws and ibis."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil4.jpg",
+          "description": "Jericoacoara National Park, located in the state of Ceara, has a famous beach that’s also called Jericoacoara, and is great for water sports such as sailing, windsurfing and sandboarding. You’ll find several distinct landscapes in this park, including beaches, swamps, sand dunes, caverns and forested areas with coconut trees."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil5.jpg",
+          "description": "Located 240 km (150 miles) from Brasilia in the state of Goias, this park is notable for its dramatic quartz rock formations and a large number of waterfalls. Pedreiras Waterfall, is one of the main attractions and a perfect spot for swimming or enjoying the healing and relaxing properties of water."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Brazil/Brazil6.jpg",
+          "description": "This park is in the northeastern section of Brazil, in the state of Maranhão. Lençóis Maranhenses contains little vegetation and is composed almost entirely of sand dunes. Tours are conducted in 4×4 vehicles, though it can also be fascinating to walk across this desert-like landscape. Although it can be hot in the afternoon, it’s refreshing to cool off in one of the many lakes, rivers or lagoons."
+        }
+      ],
+      "mapData": {
+        "center": [
+          -43.1729,
+          -22.9032
+        ],
+        "countryCode": "BRA"
+      }
+    },
+    {
+      "name": "Canada",
+      "capital": "Ottawa",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Canada/Canada_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Canada/Canada_intro2.jpg"
+      ],
+      "countryInfo": "Canada is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Canada: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/BHdIQy00_p4",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Canada/Canada1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Canada/Canada1.jpg",
+          "description": "Nova Scotia, Prince Edward Island, New Brunswick, Newfoundland, and Labrador; these are the four provinces that comprise Canada’s eastern Atlantic Provinces region. This is home to English, Irish, Scottish, and French influence; the latter settled a colony called Acadia in the early 17th century."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Canada/Canada2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Canada/Canada2.jpg",
+          "description": "The second-most populous province in Canada, Quebec also boasts a French-speaking majority and is the only monolingually French province in the country. Naturally, not only the language but French culture has been preserved here."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Canada/Canada3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Canada/Canada3.jpg",
+          "description": "90% of Ontario’s population lives in the south of the province. It’s also in the south that you will find the Great Lakes: Lake Huron, Lake Erie, Lake Ontario, Lake Superior – the largest freshwater lake in the world – to name just a few of the watery elements of the region."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Canada/Canada4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Canada/Canada4.jpg",
+          "description": "Manitoba – meaning ‘Muddy Waters’ in Western Cree – borders Ontario to the east, Nunavut to the east, Saskatchewan to the west, the United States to the south. Winnipeg is the capital and largest city of Manitoba. It gets the coldest winter temperatures out of any city in North America."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Canada/Canada5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Canada/Canada5.jpg",
+          "description": "British Columbia is crossed through by the Rockies, with Alberta on to the east, Yukon to the north, Northwest Territories to the northeast, the United States to the south, and the Pacific Ocean on the west."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Canada/Canada6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Canada/Canada6.jpg",
+          "description": "The North is one of the most remote regions on Earth and also where most of Canada’s landmass is located. Extending well into the Arctic Circle, and comprising the provinces of Yukon, Northwest Territories, and Nunavut, only around 100,000 inhabitants live in the whole region."
+        }
+      ],
+      "mapData": {
+        "center": [
+          -75.695000,
+          45.424721
+        ],
+        "countryCode": "CAN"
+      }
+    },
+    {
+      "name": "Egypt",
+      "capital": "Cairo",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Egypt/Egypt_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Egypt/Egypt_intro2.jpg"
+      ],
+      "countryInfo": "Egypt is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Egypt: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/rsv4drcgHys",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt1.jpg",
+          "description": "Hurghada is a resort town on the edge of the Red Sea, easily reached via a bumpy six-hour bus ride from Cairo. It offers a more popular alternative to Sharm El Sheikh and Dahab and is now one of Egypt’s most-visited tourist destinations. But that’s understandable, as there’s plenty to love about Hurghada with its many beaches and warm waters."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt2.jpg",
+          "description": "The second-largest city and leading seaport in Egypt, Alexandria has a prime location on the edge of the Mediterranean. Founded in 331 BC by Alexander the Great, the city was once considered the crossroads of the world. Several of Egypt’s pharaohs, including Cleopatra, ruled the country from Alexandria until the nation fell to Rome in 30 BC Under Roman rule, the city earned a reputation as a center for arts and literature."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt3.jpg",
+          "description": "The name Saqqara refers to an Egyptian village, but more importantly, an age-old necropolis with a scattering of both large and smaller satellite pyramids spread across a dusty desert plateau. Buried beneath the sand overlooking the Nile Valley until the 19th-century, Saqqara has since been undergoing a significant restoration process."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt4.jpg",
+          "description": "Located near Egypt’s western border, Siwa Oasis remained culturally isolated from the rest of the country until late in the 19th century. Surrounded by the Egyptian Sand Sea, the Siwan people developed their own unique customs as well as their own language, Siwi, a Berber dialect."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt5.jpg",
+          "description": "Sharm el Sheikh is one of the most popular resort towns in Egypt, located at the tip of the Sinai Peninsula. With its warm, deep blue water and great golden beaches, Sharm (as it’s affectionately called) is a popular package holiday destination with its own airport."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Egypt/Egypt6.jpg",
+          "description": "Dahshur is a little village south of Cairo that’s home to some lesser-known, less-crowded pyramids – you won’t find the massive queues that you’d expect at the Giza complex or Saqqara here. In fact, until 1996, it was a restricted military zone."
+        }
+      ],
+      "mapData": {
+        "center": [
+          31.233334,
+          30.033333
+        ],
+        "countryCode": "EGY"
+      }
+    },
+    {
+      "name": "France",
+      "capital": "Paris",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/France/France_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/France/France_intro2.jpg"
+      ],
+      "countryInfo": "France is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about France: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/zTjnQ0XlAc4",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France1.jpg",
+          "description": "Located along the glossy Canal de la Robine, Narbonne is not at all touristy. But with its tree-lined cobblestone streets, striking architecture, decadent food and wine, and scenic beaches, it easily could be. In fact, you’ll find some of the quietest beaches on the Med a short drive away."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France2.jpg",
+          "description": "Lourdes is a picturesque town tucked away in the Pyrenees foothills in southwestern France. It’s been a major Roman Catholic pilgrimage site since 1858 when a young woman by the name of Bernadette Soubirous claimed to have been visited by the Virgin Mary 18 times."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France3.jpg",
+          "description": "Perpignan offers a quiet city escape near the Mediterranean. It’s not your typical tourist town, but that’s part of its appeal. The small city has a beautiful historic center and some excellent cafes and coffee shops."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France4.jpg",
+          "description": "Like many of France’s underrated villages and towns, Bouzigues is not overridden with tourist attractions. Nestled between the Etang de Thau lagoon with its magnificent oyster beds and the vineyards hugging the hillside, the center is pretty, and the small beach dotted with fishing boats is like a scene from history."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France5.jpg",
+          "description": "The Canal du Midi (Canal of the Two Seas) has meandered its way between the Mediterranean and the Atlantic for over 350 years. It flows from Toulouse and eventually into the Etang de Thau basin, the second largest lake in France."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France6.jpg",
+          "description": "Lagrasse is officially listed as one of the most beautiful villages in France, and you’ll soon see why. Nestled in the foothills of the Pyrenees in the Corbieres wine region, it’s surrounded by picture-perfect stone buildings and the River Orbieu."
+        }
+      ],
+      "mapData": {
+        "center": [
+          2.349014,
+          48.864716
+        ],
+        "countryCode": "FRA"
+      }
+    },
+    {
+      "name": "Germany",
+      "capital": "Berlin",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/Germany/Germany_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/Germany/Germany_intro2.jpg"
+      ],
+      "countryInfo": "Germany is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about Germany: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/9T49_LduzpQ",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Germany/Germany1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Germany/Germany1.jpg",
+          "description": "Dusseldorf is an international trade and business center, hosting numerous trade fairs throughout the year. It’s also known for its tech and fashion industries. Christmas is a good time to visit Dusseldorf, since it puts on one of the biggest Christmas markets in the country."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Germany/Germany2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Germany/Germany2.jpg",
+          "description": "Aachen is a spa and tech city now, but centuries ago, it served as the imperial palace for Charlemagne, emperor of the Holy Roman Empire. Charlemagne ordered the building of the Aachen Cathedral in 796, and is buried there. The huge cathedral served as the coronation site for 30 kings and 12 queens of Germany."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Germany/Germany3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Germany/Germany3.jpg",
+          "description": "Once a Roman stronghold, Koblenz is considered one of the most beautiful towns in West Germany. One of the best places to take in all this beauty is from Ehrenbreitstein Fortress above the Rhine. Located at the confluence of the Rhine and Moselle rivers with mountains in the background, could it e otherwise. Because of its unique position, Koblenz makes a good place to start cruises on the rivers."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Germany/Germany4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Germany/Germany4.jpg",
+          "description": "Founded by the Celts in the 4th century BC, Trier is believed to be the oldest city in Germany. Known as Treves in English, Trier is located on the banks of the Moselle River smack dab in wine country. Be sure to try the Riesling, the region’s top wine."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Germany/Germany5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Germany/Germany5.jpg",
+          "description": "Located west from Frankfurt, Mainz certainly has an impressive history. It was founded by the Romans in the 1st century BC. Some 1,500 years later, it was the place where Guttenberg invented the movable type printing press, making books as we know them today possible."
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/Germany/Germany6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/Germany/Germany6.jpg",
+          "description": "At one time, Frankfurt was an important city in the Holy Roman Empire. Today, Germany’s fifth largest city is known as the business and financial center of Germany; you’ll find the German Stock Exchange as well as the European Central Bank here."
+        }
+      ],
+      "mapData": {
+        "center": [
+          10.4515,
+          51.1657
+        ],
+        "countryCode": "DEU"
+      }
+    },
+    {
+      "name": "France",
+      "capital": "Paris",
+      "titleImages": [
+        "https://alexander0152.github.io/travelData/assets/France/France_intro1.jpg",
+        "https://alexander0152.github.io/travelData/assets/France/France_intro2.jpg"
+      ],
+      "countryInfo": "France is a sunny continent of antipodes with amazing animals. Diving on the Great Barrier Reef, excursions to Adelaide, Brisbane and Melbourne, Sydney sights and Aboriginal villages - everything about France: visa, photos, tours and maps. Amusement Parks, Festivals, Gambling Centers, Golf Courses, Historic Buildings and Monuments, Hotels, Museums, Galleries, Outdoor Activities, Spas, Restaurants, and Sports Events.",
+      "videoLink": "https://www.youtube.com/embed/BHdIQy00_p4",
+      "slides": [
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France1.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France1.jpg",
+          "description": ""
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France2.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France2.jpg",
+          "description": ""
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France3.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France3.jpg",
+          "description": ""
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France4.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France4.jpg",
+          "description": ""
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France5.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France5.jpg",
+          "description": ""
+        },
+        {
+          "original": "https://alexander0152.github.io/travelData/assets/France/France6.jpg",
+          "thumbnail": "https://alexander0152.github.io/travelData/assets/France/France6.jpg",
+          "description": ""
+        }
+      ],
+      "mapData": {
+        "center": [
+          149.125529,
+          -35.306904
+        ],
+        "countryCode": "FRA"
+      }
     }
   ]
 }

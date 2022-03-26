@@ -17,15 +17,26 @@ const card_container = {
 }
 
 function CountryPage({country}) {
-    const [countryInfo, setCountryInfo] = React.useState({});
+    const [countryInfo, setCountryInfo] = React.useState({
+        name: '',
+        capital: '',
+        titleImages: [],
+        countryInfo: '',
+        videoLink: '',
+        slides: [],
+        mapData: {
+            center: [149.125529, -35.306904],
+            countryCode: "USA"
+        },
+    });
 
     useEffect(() => {
         const dataService = new DataService();
-        dataService.getCountryData().then((res) => {
+        dataService.getCountryData(country.countryName).then((res) => {
             setCountryInfo(res);
         });
 
-    }, [])
+    }, [country])
 
     return (
         <section class="country_card">
@@ -34,10 +45,10 @@ function CountryPage({country}) {
                     <p className="country-page__title">{countryInfo.name}</p>
                     <h3>{countryInfo.capital}</h3>
                     <div className="country-page__intro__images">
-                        <img className="country-page__intro__images__first" src="assets/images/USA_into1.jpg"
-                             alt="USA image1"/>
-                        <img className="country-page__intro__images__second" src="assets/images/USA_into2.jpg"
-                             alt="USA image2"/>
+                        <img className="country-page__intro__images__first" src={countryInfo.titleImages[0]}
+                             alt="title image 1"/>
+                        <img className="country-page__intro__images__second" src={countryInfo.titleImages[1]}
+                             alt="title image 2"/>
                     </div>
                     <h1 className="country-page__info__title">Some information about {countryInfo.name}</h1>
                     <div className="country-page__info__content">
@@ -55,9 +66,9 @@ function CountryPage({country}) {
                     </div>
                     <section className="country-page__gallery">
                         <h1 class="gallery-title">Sights</h1>
-                        <CountryPageSlider/>
+                        <CountryPageSlider slides={countryInfo.slides}/>
                         <h1 class="gallery-title">Map</h1>
-                        <Map countryName={'USA'}/>
+                        <Map countryCode={countryInfo.mapData.countryCode} center={countryInfo.mapData.center}/>
                     </section>
                 </main>
             </div>

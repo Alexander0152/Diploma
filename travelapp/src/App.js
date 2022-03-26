@@ -10,11 +10,12 @@ import LoginModal from './views/Modal/LoginModal'
 import SignInModal from './views/Modal/SigninModal'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import CountryPage from "./views/ContryPages/CountryPage";
+import {imageHost} from "./constants/constants";
 
 const fadeImages = [
-    'assets/images/hill.jpg',
-    'assets/images/dubai.jpg',
-    'assets/images/sea.jpg'
+    imageHost + '/others/hill.jpg',
+    imageHost + '/others/dubai.jpg',
+    imageHost + '/others/sea.jpg'
 ];
 
 function App() {
@@ -161,7 +162,7 @@ function App() {
                                 </Fade>
                             </div>
                         </div>
-                    </section>
+                    </section>`
                     <section className="cards">
                         <div className="panel_sort">
                             <button className="btn btn-info btn_sort" onClick={() => sortByRating()}>Sort by rating
@@ -179,7 +180,12 @@ function App() {
                     </section>
                 </Route>
                 <Route exact path="/USA" component={() => <CountryPage country={cards[13]}/>}/>
-                <Route exact path="/Australia" component={() => <Australia country={cards[0]}/>}/>
+                <Route exact path="/Australia" component={() => <CountryPage country={cards[0]}/>}/>
+                <Route exact path="/Brazil" component={() => <CountryPage country={cards[1]}/>}/>
+                <Route exact path="/Canada" component={() => <CountryPage country={cards[2]}/>}/>
+                <Route exact path="/Egypt" component={() => <CountryPage country={cards[3]}/>}/>
+                <Route exact path="/France" component={() => <CountryPage country={cards[4]}/>}/>
+                <Route exact path="/Germany" component={() => <CountryPage country={cards[5]}/>}/>
                 <footer>
                     <div class="wrapper">
                         <div class="content">

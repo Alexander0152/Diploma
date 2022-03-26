@@ -1,0 +1,1 @@
+export const imageHost = 'https://alexander0152.github.io/travelData/assets';

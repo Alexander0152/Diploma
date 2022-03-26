@@ -47,7 +47,6 @@ function USA({country}) {
             <h1 class="gallery-title">Sights</h1>
             <CountryPageSlider />
             <h1 class="gallery-title">Map</h1>
-            <Map countryName={'USA'} />
           </section>
         </main>
       </div>

@@ -1,8 +1,8 @@
 class DataService {
 
-    getCountryData() {
+    getCountryData(countryName) {
 
-        return fetch('/api/countryinfo/pageinfo/USA', {
+        return fetch(`/api/countryinfo/pageinfo/${countryName}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -12,7 +12,7 @@ class DataService {
             .then(res => res.json())
             .then(
                 (result) => {
-                    return result.country[0];
+                    return result;
                 },
                 (error) => {
                     console.log(error);

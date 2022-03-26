@@ -1,5 +1,5 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
+import {imageHost} from "../../constants/constants";
 
 const card_container = {
   width: '300px',
@@ -28,7 +28,7 @@ const rating = {
 }
 
 function CountryCard({ country }) {
-  const imagePass = 'assets/images/' + country.countryName + '.jpg';
+  const imagePass = imageHost + '/' + country.countryName + '/' + country.countryName + '.jpg';
   const newStyles = { ...card_container, ...{ backgroundImage: `url(${imagePass})` } };
   return (
     <div className="card_item" style={newStyles}>
