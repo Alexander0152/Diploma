@@ -11,6 +11,7 @@ import SignInModal from './views/Modal/SigninModal'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import CountryPage from "./views/ContryPages/CountryPage";
 import {imageHost} from "./constants/constants";
+import ScrollToTop from "./scrollToTop/scrollToTop";
 
 const fadeImages = [
     imageHost + '/others/hill.jpg',
@@ -89,7 +90,7 @@ function App() {
                 Text: feedbackText
             };
             fetch('api/feedback/AddFeedback', {
-                method: "POST",
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -101,8 +102,14 @@ function App() {
             alert('Something goes wrong!');
         }
     };
+
+    function getCardByName(name) {
+        return cards.filter(country => country.countryName === name)[0];
+    }
+
     return (
         <Router>
+            <ScrollToTop/>
             <div className="App">
                 <header className="header">
                     <div className="wrapper">
@@ -179,20 +186,20 @@ function App() {
                         </div>
                     </section>
                 </Route>
-                <Route exact path="/Australia" component={() => <CountryPage country={cards[0]}/>}/>
-                <Route exact path="/Brazil" component={() => <CountryPage country={cards[1]}/>}/>
-                <Route exact path="/Canada" component={() => <CountryPage country={cards[2]}/>}/>
-                <Route exact path="/Egypt" component={() => <CountryPage country={cards[3]}/>}/>
-                <Route exact path="/France" component={() => <CountryPage country={cards[4]}/>}/>
-                <Route exact path="/Germany" component={() => <CountryPage country={cards[5]}/>}/>
-                <Route exact path="/Greece" component={() => <CountryPage country={cards[6]}/>}/>
-                <Route exact path="/Italy" component={() => <CountryPage country={cards[7]}/>}/>
-                <Route exact path="/Japan" component={() => <CountryPage country={cards[8]}/>}/>
-                <Route exact path="/Mexico" component={() => <CountryPage country={cards[9]}/>}/>
-                <Route exact path="/Russia" component={() => <CountryPage country={cards[10]}/>}/>
-                <Route exact path="/Switzerland" component={() => <CountryPage country={cards[11]}/>}/>
-                <Route exact path="/UK" component={() => <CountryPage country={cards[12]}/>}/>
-                <Route exact path="/USA" component={() => <CountryPage country={cards[13]}/>}/>
+                <Route exact path="/Australia" component={() => <CountryPage country={getCardByName('Australia')}/>}/>
+                <Route exact path="/Brazil" component={() => <CountryPage country={getCardByName('Brazil')}/>}/>
+                <Route exact path="/Canada" component={() => <CountryPage country={getCardByName('Canada')}/>}/>
+                <Route exact path="/Egypt" component={() => <CountryPage country={getCardByName('Egypt')}/>}/>
+                <Route exact path="/France" component={() => <CountryPage country={getCardByName('France')}/>}/>
+                <Route exact path="/Germany" component={() => <CountryPage country={getCardByName('Germany')}/>}/>
+                <Route exact path="/Greece" component={() => <CountryPage country={getCardByName('Greece')}/>}/>
+                <Route exact path="/Italy" component={() => <CountryPage country={getCardByName('Italy')}/>}/>
+                <Route exact path="/Japan" component={() => <CountryPage country={getCardByName('Japan')}/>}/>
+                <Route exact path="/Mexico" component={() => <CountryPage country={getCardByName('Mexico')}/>}/>
+                <Route exact path="/Russia" component={() => <CountryPage country={getCardByName('Russia')}/>}/>
+                <Route exact path="/Switzerland" component={() => <CountryPage country={getCardByName('Switzerland')}/>}/>
+                <Route exact path="/UK" component={() => <CountryPage country={getCardByName('UK')}/>}/>
+                <Route exact path="/USA" component={() => <CountryPage country={getCardByName('USA')}/>}/>
                 <footer>
                     <div class="wrapper">
                         <div class="content">
@@ -282,7 +289,7 @@ function App() {
                             <div class="footer_copyrights">
                                 <span class="copyrights_text mt-28">©Galushkin Alexander</span>
                                 <span class="copyrights_text"
-                                >©GRSU- 2021</span
+                                >©GRSU- 2022</span
                                 >
                             </div>
                         </div>

@@ -31,12 +31,15 @@ function CountryPage({country}) {
     });
 
     useEffect(() => {
+        if(!country){
+            return;
+        }
         const dataService = new DataService();
         dataService.getCountryData(country.countryName).then((res) => {
             setCountryInfo(res);
         });
 
-    }, [country])
+    }, [])
 
     return (
         <section class="country_card">
