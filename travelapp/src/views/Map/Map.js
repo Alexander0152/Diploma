@@ -63,25 +63,52 @@ function Map(props) {
         // });
     }
 
-    const description = '<h1>Some description</h1>'
+    function createHotelPopup(hotelData) {
+        return `<a href=${hotelData.link}>` +
+            '<div class="infowindow">' +
+            '<div>' +
+            '<img class="hotel" src="https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg">' +
+            '</img>' +
+            '<h4>Hotel Name</h4>' +
+            ' <div class="hotel_rating">\n' +
+            '                <ul style={ul}>\n' +
+            '                    <li class="star">&#9733;</li>\n' +
+            '                    <li class="star">&#9733;</li>\n' +
+            '                    <li class="star">&#9733;</li>\n' +
+            '                    <li class="star">&#9733;</li>\n' +
+            '                    <li class="star">&#9733;</li>\n' +
+            '                </ul>\n' +
+            '            </div>' +
+            '</div>' +
+            '</a>' +
+            '</div>'
+    }
+
     function showHotelsMarkers() {
         const hotels = [{
-            name: 'First Hotel',
+            name: 'Grand Hotel Union',
             lng: 12.55472,
             lat: 55.665957,
+            rating: 4,
+            link: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg'
         },
             {
                 name: 'First Hotel',
                 lng: 14.55472,
                 lat: 57.665957,
+                rating: 4,
+                link: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg'
             }];
 
         hotels.map((hotel) => {
             const popup = new mapboxgl.Popup()
                 .setLngLat({lng: hotel.lng, lat: hotel.lat})
-                .setHTML(description);
+                .setHTML(createHotelPopup(hotels[0]));
 
-            new mapboxgl.Marker({ color: 'orange'}).setLngLat({lng: hotel.lng, lat: hotel.lat}).setPopup(popup).addTo(map);
+            new mapboxgl.Marker({color: 'orange'}).setLngLat({
+                lng: hotel.lng,
+                lat: hotel.lat
+            }).setPopup(popup).addTo(map);
         })
     }
 

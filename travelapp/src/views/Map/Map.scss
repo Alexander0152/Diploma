@@ -1,0 +1,35 @@
+.infowindow {
+
+  border-radius: 10px;
+  img{
+    width: 215px;
+    height: 143px;
+    margin: -10px;
+    margin-bottom: 0;
+  }
+
+  .hotel_rating {
+    display: flex;
+
+    ul {
+      list-style: none;
+      display: inline;
+      padding: 0;
+
+      li {
+        display: inline;
+      }
+    }
+
+    .star {
+      font-size: 20px;
+      color: #ffd500;
+    }
+  }
+}
+
+.mapboxgl-popup-close-button{
+  font-size: 30px;
+  color: white;
+  margin: 3px;
+}
