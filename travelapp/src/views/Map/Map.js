@@ -8,6 +8,7 @@ mapboxgl.accessToken = MapAccessToken;
 function Map(props) {
     let map;
     const layerId = 'countries';
+    const hotelMarkers = [];
 
     let mapStyles = MapStyles.Streets;
 
@@ -64,19 +65,19 @@ function Map(props) {
     }
 
     function createHotelPopup(hotelData) {
-        return `<a href=${hotelData.link}>` +
+        return `<a href=${hotelData.link} target="_blank">` +
             '<div class="infowindow">' +
             '<div>' +
-            '<img class="hotel" src="https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg">' +
+            `<img class="hotel" src=${hotelData.image}>` +
             '</img>' +
-            '<h4>Hotel Name</h4>' +
+            `<h4 class="hotel_name">${hotelData.name}</h4>` +
             ' <div class="hotel_rating">\n' +
             '                <ul style={ul}>\n' +
-            '                    <li class="star">&#9733;</li>\n' +
-            '                    <li class="star">&#9733;</li>\n' +
-            '                    <li class="star">&#9733;</li>\n' +
-            '                    <li class="star">&#9733;</li>\n' +
-            '                    <li class="star">&#9733;</li>\n' +
+            `                    ${hotelData.rating >= 1 ? '<li class="star">&#9733;</li>\n' : ''}` +
+            `                    ${hotelData.rating >= 2 ? '<li class="star">&#9733;</li>\n' : ''}` +
+            `                    ${hotelData.rating >= 3 ? '<li class="star">&#9733;</li>\n' : ''}` +
+            `                    ${hotelData.rating >= 4 ? '<li class="star">&#9733;</li>\n' : ''}` +
+            `                    ${hotelData.rating >= 5 ? '<li class="star">&#9733;</li>\n' : ''}` +
             '                </ul>\n' +
             '            </div>' +
             '</div>' +
@@ -90,26 +91,41 @@ function Map(props) {
             lng: 12.55472,
             lat: 55.665957,
             rating: 4,
-            link: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg'
+            image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
+            link: 'https://www.uhcollection.si/grand-hotel-union'
         },
             {
                 name: 'First Hotel',
                 lng: 14.55472,
                 lat: 57.665957,
-                rating: 4,
-                link: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg'
+                rating: 5,
+                image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
+                link: 'https://www.uhcollection.si/grand-hotel-union'
             }];
 
         hotels.map((hotel) => {
             const popup = new mapboxgl.Popup()
                 .setLngLat({lng: hotel.lng, lat: hotel.lat})
-                .setHTML(createHotelPopup(hotels[0]));
+                .setHTML(createHotelPopup(hotels[1]));
 
-            new mapboxgl.Marker({color: 'orange'}).setLngLat({
+            const hotelMarker = new mapboxgl.Marker({color: 'orange'}).setLngLat({
                 lng: hotel.lng,
                 lat: hotel.lat
             }).setPopup(popup).addTo(map);
+
+            hotelMarkers.push(hotelMarker);
         })
+
+        map.on('dragend', (e) => {
+            alert(map.getCenter());
+            removeHotelMarkers();
+        });
+    }
+
+    function removeHotelMarkers() {
+        hotelMarkers.map((marker) => {
+            marker.remove();
+        });
     }
 
     const mapContainerRef = useRef(null);

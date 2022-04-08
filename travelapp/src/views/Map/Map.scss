@@ -1,11 +1,22 @@
 .infowindow {
 
+  a:hover{
+    text-decoration: none;
+  }
+
   border-radius: 10px;
   img{
     width: 215px;
     height: 143px;
     margin: -10px;
     margin-bottom: 0;
+  }
+
+  .hotel_name{
+    max-width: 195px;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: left;
   }
 
   .hotel_rating {
@@ -22,8 +33,9 @@
     }
 
     .star {
-      font-size: 20px;
+      font-size: 24px;
       color: #ffd500;
+      text-shadow: 1px 1px 2px grey;
     }
   }
 }
