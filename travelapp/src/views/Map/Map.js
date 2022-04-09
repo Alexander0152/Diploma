@@ -2,6 +2,7 @@ import React, {useRef, useEffect, useState} from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {MapAccessToken, MapStyles} from '../../constants/constants';
+import DataService from "../../services/DataService";
 
 mapboxgl.accessToken = MapAccessToken;
 
@@ -9,6 +10,7 @@ function Map(props) {
     let map;
     const layerId = 'countries';
     const hotelMarkers = [];
+    const dataService = new DataService();
 
     let mapStyles = MapStyles.Streets;
 
@@ -85,40 +87,41 @@ function Map(props) {
             '</div>'
     }
 
-    function showHotelsMarkers() {
-        const hotels = [{
-            name: 'Grand Hotel Union',
-            lng: 12.55472,
-            lat: 55.665957,
-            rating: 4,
-            image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
-            link: 'https://www.uhcollection.si/grand-hotel-union'
-        },
-            {
-                name: 'First Hotel',
-                lng: 14.55472,
-                lat: 57.665957,
-                rating: 5,
-                image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
-                link: 'https://www.uhcollection.si/grand-hotel-union'
-            }];
-
-        hotels.map((hotel) => {
-            const popup = new mapboxgl.Popup()
-                .setLngLat({lng: hotel.lng, lat: hotel.lat})
-                .setHTML(createHotelPopup(hotels[1]));
-
-            const hotelMarker = new mapboxgl.Marker({color: 'orange'}).setLngLat({
-                lng: hotel.lng,
-                lat: hotel.lat
-            }).setPopup(popup).addTo(map);
-
-            hotelMarkers.push(hotelMarker);
-        })
+    function showHotelsMarkers(hotels) {
+        // const hotels = [{
+        //     name: 'Grand Hotel Union',
+        //     lng: 12.55472,
+        //     lat: 55.665957,
+        //     rating: 4,
+        //     image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
+        //     link: 'https://www.uhcollection.si/grand-hotel-union'
+        // },
+        //     {
+        //         name: 'First Hotel',
+        //         lng: 14.55472,
+        //         lat: 57.665957,
+        //         rating: 5,
+        //         image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
+        //         link: 'https://www.uhcollection.si/grand-hotel-union'
+        //     }];
 
         map.on('dragend', (e) => {
-            alert(map.getCenter());
             removeHotelMarkers();
+            const n = dataService.getHotels(76, map.getCenter());
+            dataService.getHotels(76, map.getCenter()).then((hotels) => {
+                hotels.map((hotel) => {
+                    const popup = new mapboxgl.Popup()
+                        .setLngLat({lng: hotel.longitude, lat: hotel.latitude})
+                        .setHTML(createHotelPopup(hotels[0]));
+
+                    const hotelMarker = new mapboxgl.Marker({color: 'orange'}).setLngLat({
+                        lng: hotel.longitude,
+                        lat: hotel.latitude
+                    }).setPopup(popup).addTo(map);
+
+                    hotelMarkers.push(hotelMarker);
+                })
+            });
         });
     }
 

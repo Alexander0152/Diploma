@@ -9,6 +9,7 @@ namespace TravelAppServer.Models
         public DbSet<Country> Countries { get; set; }
         public DbSet<CountryInfo> CountryInfo { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Hotel> Hotels { get; set; }
 
         public TravelUsersContext(DbContextOptions<TravelUsersContext> options) : base(options)
         {
@@ -48,6 +49,17 @@ namespace TravelAppServer.Models
             modelBuilder.Entity<Feedback>().Property(u => u.UserId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Feedback>().Property(u => u.CountryId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Feedback>().Property(u => u.FeedbackText).HasColumnType("nvarchar(1000)").IsRequired();
+            
+            modelBuilder.Entity<Hotel>().ToTable("Hotels");
+
+            modelBuilder.Entity<Hotel>().Property(u => u.Id).HasColumnType("int").UseMySqlIdentityColumn().IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.CountryId).HasColumnType("CountryId").UseMySqlIdentityColumn().IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Name).HasColumnType("nvarchar(45)").IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Longitude).HasColumnType("double").IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Latitude).HasColumnType("double").IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Rating).HasColumnType("int").IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Image).HasColumnType("nvarchar(1000)").IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Link).HasColumnType("nvarchar(1000)").IsRequired();
         }
     }
 }
