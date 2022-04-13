@@ -68,7 +68,6 @@ C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Pomelo.Entity
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csprojAssemblyReference.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.AssemblyInfoInputs.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.AssemblyInfo.cs
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.RazorTargetAssemblyInfo.cache

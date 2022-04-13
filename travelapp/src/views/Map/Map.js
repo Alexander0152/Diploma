@@ -95,15 +95,7 @@ function Map(props) {
         //     rating: 4,
         //     image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
         //     link: 'https://www.uhcollection.si/grand-hotel-union'
-        // },
-        //     {
-        //         name: 'First Hotel',
-        //         lng: 14.55472,
-        //         lat: 57.665957,
-        //         rating: 5,
-        //         image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
-        //         link: 'https://www.uhcollection.si/grand-hotel-union'
-        //     }];
+        // }
 
         map.on('dragend', (e) => {
             removeHotelMarkers();
@@ -112,7 +104,7 @@ function Map(props) {
                 hotels.map((hotel) => {
                     const popup = new mapboxgl.Popup()
                         .setLngLat({lng: hotel.longitude, lat: hotel.latitude})
-                        .setHTML(createHotelPopup(hotels[0]));
+                        .setHTML(createHotelPopup(hotel));
 
                     const hotelMarker = new mapboxgl.Marker({color: 'orange'}).setLngLat({
                         lng: hotel.longitude,

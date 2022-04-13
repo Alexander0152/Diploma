@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using TravelAppServer.Models;
+using TravelAppServer.Services;
 
 namespace TravelAppServer.Controllers
 {
@@ -25,24 +26,28 @@ namespace TravelAppServer.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Hotel>>> Get([FromQuery(Name = "countryId")] int countryId, [FromQuery(Name = "lat")] double lat, [FromQuery(Name = "lng")] double lng)
         {
-            var hotels = db.Hotels.Where(x => x.CountryId == countryId);
-            //Hotel horel = await db.Hotels.FirstOrDefaultAsync(x => x.Id == id);
+            List<Hotel> result = new List<Hotel>();
+
+            Hotel[] hotels = db.Hotels.Where(x => x.CountryId == countryId).ToArray<Hotel>();
+
             if (hotels == null)
                 return NotFound();
-            return new ObjectResult(hotels);
+
+            MapService mapService = new MapService();
+            double distance = 0;
+
+            foreach (Hotel hotel in hotels)
+            {
+                distance = mapService.GetDistance(lat, lng, hotel.Latitude, hotel.Longitude);
+
+                if (distance <= 100) // km
+                {
+                    result.Add(hotel);
+                }
+
+            }
+
+            return new ObjectResult(result);
         }
-        /*
-        // GET api/hotels/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<Hotel>>> Get(int countryId)
-        {
-            var hotels = db.Hotels.Where(x => x.CountryId == countryId);
-            //Hotel horel = await db.Hotels.FirstOrDefaultAsync(x => x.Id == id);
-            List<User> users = await db.Users.ToListAsync();
-            if (hotels == null)
-                return NotFound();
-            return new ObjectResult(hotels);
-        }
-        */
     }
 }
