@@ -55,8 +55,8 @@ namespace TravelAppServer.Models
             modelBuilder.Entity<Hotel>().Property(u => u.Id).HasColumnType("int").UseMySqlIdentityColumn().IsRequired();
             modelBuilder.Entity<Hotel>().Property(u => u.CountryId).HasColumnType("CountryId").UseMySqlIdentityColumn().IsRequired();
             modelBuilder.Entity<Hotel>().Property(u => u.Name).HasColumnType("nvarchar(45)").IsRequired();
-            modelBuilder.Entity<Hotel>().Property(u => u.Longitude).HasColumnType("double").IsRequired();
             modelBuilder.Entity<Hotel>().Property(u => u.Latitude).HasColumnType("double").IsRequired();
+            modelBuilder.Entity<Hotel>().Property(u => u.Longitude).HasColumnType("double").IsRequired();
             modelBuilder.Entity<Hotel>().Property(u => u.Rating).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Hotel>().Property(u => u.Image).HasColumnType("nvarchar(1000)").IsRequired();
             modelBuilder.Entity<Hotel>().Property(u => u.Link).HasColumnType("nvarchar(1000)").IsRequired();

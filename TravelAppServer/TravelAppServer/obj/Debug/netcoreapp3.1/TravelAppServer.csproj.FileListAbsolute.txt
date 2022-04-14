@@ -81,3 +81,4 @@ C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\data\countryI
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CoreCompileInputs.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csprojAssemblyReference.cache

@@ -99,8 +99,9 @@ function Map(props) {
 
         map.on('dragend', (e) => {
             removeHotelMarkers();
-            const n = dataService.getHotels(76, map.getCenter());
-            dataService.getHotels(76, map.getCenter()).then((hotels) => {
+            var p = props;
+            const n = dataService.getHotels(14, map.getCenter());
+            dataService.getHotels(14, map.getCenter()).then((hotels) => {
                 hotels.map((hotel) => {
                     const popup = new mapboxgl.Popup()
                         .setLngLat({lng: hotel.longitude, lat: hotel.latitude})
