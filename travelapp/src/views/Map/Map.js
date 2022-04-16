@@ -83,6 +83,7 @@ function Map(props) {
             '                </ul>\n' +
             '            </div>' +
             '</div>' +
+            '<h5 class="modal_footer">Visit site</h5>' +
             '</a>' +
             '</div>'
     }
@@ -99,10 +100,9 @@ function Map(props) {
 
         map.on('dragend', (e) => {
             removeHotelMarkers();
-            var p = props;
-            const n = dataService.getHotels(14, map.getCenter());
-            dataService.getHotels(14, map.getCenter()).then((hotels) => {
-                hotels.map((hotel) => {
+            const n = dataService.getHotels(props.countryCode, map.getCenter());
+            dataService.getHotels(props.countryCode, map.getCenter()).then((hotels) => {
+                hotels?.map((hotel) => {
                     const popup = new mapboxgl.Popup()
                         .setLngLat({lng: hotel.longitude, lat: hotel.latitude})
                         .setHTML(createHotelPopup(hotel));

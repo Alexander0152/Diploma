@@ -41,6 +41,7 @@ D:\LABS_6_SEM\COURSE_WORK\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.
 D:\LABS_6_SEM\COURSE_WORK\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.MvcApplicationPartsAssemblyInfo.cache
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\data\countryInfo.json
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\TravelAppServer.exe
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\TravelAppServer.deps.json
@@ -64,12 +65,15 @@ C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Microsoft.Ext
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.AssemblyInfoInputs.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.AssemblyInfo.cs
+C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CoreCompileInputs.cache
+C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.MvcApplicationPartsAssemblyInfo.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.RazorTargetAssemblyInfo.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CopyComplete
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\staticwebassets\TravelAppServer.StaticWebAssets.Manifest.cache
@@ -77,8 +81,4 @@ C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\staticwebasse
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.dll
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.pdb
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.genruntimeconfig.cache
-C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\data\countryInfo.json
-C:\Diploma\TravelAppServer\TravelAppServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csproj.CoreCompileInputs.cache
-C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.MvcApplicationPartsAssemblyInfo.cache
 C:\Diploma\TravelAppServer\TravelAppServer\obj\Debug\netcoreapp3.1\TravelAppServer.csprojAssemblyReference.cache

@@ -20,9 +20,9 @@ class DataService {
             );
     }
 
-    getHotels(countryId, center) {
+    getHotels(countryCode, center) {
 
-        return fetch(`/api/hotels?countryId=${countryId}&lat=${center.lat}&lng=${center.lng}`, {
+        return fetch(`/api/hotels?countryCode=${countryCode}&lat=${center.lat}&lng=${center.lng}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',

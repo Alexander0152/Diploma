@@ -24,11 +24,16 @@ namespace TravelAppServer.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Hotel>>> Get([FromQuery(Name = "countryId")] int countryId, [FromQuery(Name = "lat")] double lat, [FromQuery(Name = "lng")] double lng)
+        public async Task<ActionResult<IEnumerable<Hotel>>> Get([FromQuery(Name = "countryCode")] string countryCode, [FromQuery(Name = "lat")] double lat, [FromQuery(Name = "lng")] double lng)
         {
             List<Hotel> result = new List<Hotel>();
+            List<Hotel> hotels = null;
+            Country country = db.Countries.Where(x => x.CountryCode == countryCode).FirstOrDefault();
+            if (country != null)
+            {
+                hotels = db.Hotels.Where(x => x.CountryId == country.Id).ToList();
+            }
 
-            Hotel[] hotels = db.Hotels.Where(x => x.CountryId == countryId).ToArray<Hotel>();
 
             if (hotels == null)
                 return NotFound();

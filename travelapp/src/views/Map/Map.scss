@@ -1,3 +1,8 @@
+.mapboxgl-popup{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .infowindow {
 
   a:hover{
@@ -26,6 +31,7 @@
       list-style: none;
       display: inline;
       padding: 0;
+      margin-bottom: 3px;
 
       li {
         display: inline;
@@ -37,6 +43,13 @@
       color: #ffd500;
       text-shadow: 1px 1px 2px grey;
     }
+  }
+
+  .modal_footer{
+    text-align: center;
+    margin-bottom: 0;
+    color: #420080;
+    font-size: 18x;
   }
 }
 
