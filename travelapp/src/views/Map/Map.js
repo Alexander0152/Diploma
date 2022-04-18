@@ -88,16 +88,7 @@ function Map(props) {
             '</div>'
     }
 
-    function showHotelsMarkers(hotels) {
-        // const hotels = [{
-        //     name: 'Grand Hotel Union',
-        //     lng: 12.55472,
-        //     lat: 55.665957,
-        //     rating: 4,
-        //     image: 'https://alexander0152.github.io/travelData/assets/Hotels/Grand_Hotel_Union.jpg',
-        //     link: 'https://www.uhcollection.si/grand-hotel-union'
-        // }
-
+    function showHotelsMarkers() {
         map.on('dragend', (e) => {
             removeHotelMarkers();
             const n = dataService.getHotels(props.countryCode, map.getCenter());
