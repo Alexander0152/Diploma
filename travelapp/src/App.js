@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Fade} from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import CountryCard from './views/CountryCards/CountryCard';
-import USA from './views/ContryPages/USA';
-import Australia from './views/ContryPages/Australia';
 import LoginModal from './views/Modal/LoginModal'
 import SignInModal from './views/Modal/SigninModal'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";

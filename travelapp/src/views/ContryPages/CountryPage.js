@@ -3,18 +3,7 @@ import CountryPageSlider from '../CountryPageSlider/CountryPageSlider'
 import Map from '../Map/Map'
 import RatingWidget from '../RatingWidget/RatingWidget'
 import DataService from "../../services/DataService";
-
-const card_container = {
-    width: '300px',
-    height: '300px',
-    backgroundColor: 'red',
-    backgroundSize: 'cover',
-    marginBottom: '50px',
-    padding: 0,
-    borderRadius: '9px',
-    color: 'white',
-    boxShadow: '3px 3px 3px 3px black'
-}
+import Comments from "../comments/Comments";
 
 function CountryPage({country}) {
     const [countryInfo, setCountryInfo] = React.useState({
@@ -31,7 +20,7 @@ function CountryPage({country}) {
     });
 
     useEffect(() => {
-        if(!country){
+        if (!country) {
             return;
         }
         const dataService = new DataService();
@@ -75,6 +64,10 @@ function CountryPage({country}) {
                     </section>
                 </main>
             </div>
+            <Comments
+                commentsUrl="http://localhost:3004/comments"
+                currentUserId="1"
+            />
         </section>
     )
 }
