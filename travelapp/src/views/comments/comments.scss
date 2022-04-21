@@ -4,7 +4,7 @@
   width: 85%;
   background-color: azure;
   border-radius: 20px;
-  //margin-bottom: 28px;
+  margin-bottom: -28px;
 }
 
 .comments-title {
@@ -80,6 +80,7 @@
 
 .comment-text {
   font-size: 18px;
+  text-align: left;
 }
 
 .comment-actions {

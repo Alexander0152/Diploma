@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from './Modal.module.css'
+import styles from './Modal.module.scss'
+import AccountService from "../../services/accountService";
 
 
 export default class LogInModal extends React.Component {
@@ -9,37 +10,42 @@ export default class LogInModal extends React.Component {
             isOpen: false,
             message: ''
         }
-        this.name = 'ds';
-        this.email = 'sssd';
-        this.password = 'ds';
-        this.status = 'user';
+        this.user = {
+            name: '',
+            email: '',
+            password: '',
+            status: ''
+        };
+
+        this.accountService = new AccountService();
     }
 
     addUserToDb = (event) => {
         event.preventDefault();
-        try {
-            let data = {
-                Name: this.name,
-                Email: this.email,
-                Password: this.password,
-                Status: this.status
-            };
-            fetch('api/users/AddUser', {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-
-        } catch (e) {
-            this.setState({
-                message: 'Such user already exist!',
-            })
-        }
-        this.setState({
-            message: 'You loged in successfully!',
-        })
+        this.accountService.addUser(this.user);
+        // try {
+        //     let data = {
+        //         Name: this.name,
+        //         Email: this.email,
+        //         Password: this.password,
+        //         Status: this.status
+        //     };
+        //     fetch('api/users/AddUser', {
+        //         method: "POST",
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(data)
+        //     })
+        //
+        // } catch (e) {
+        //     this.setState({
+        //         message: 'Such user already exist!',
+        //     })
+        // }
+        // this.setState({
+        //     message: 'You loged in successfully!',
+        // })
     };
 
     render() {
@@ -56,7 +62,7 @@ export default class LogInModal extends React.Component {
                                 name="contactName"
                                 placeholder="Name"
                                 required="true"
-                                onInput={(e)=>(this.name = e.target.value)}
+                                onInput={(e)=>(this.user.name = e.target.value)}
                             />
                             <input
                                 className="form-control"
@@ -64,7 +70,7 @@ export default class LogInModal extends React.Component {
                                 name="Email"
                                 placeholder="Email"
                                 required="true"
-                                onInput={(e)=>(this.email = e.target.value)}
+                                onInput={(e)=>(this.user.email = e.target.value)}
                             />
                             <input
                                 className="form-control"
@@ -72,7 +78,7 @@ export default class LogInModal extends React.Component {
                                 name="password"
                                 placeholder="Password"
                                 required="true"
-                                onInput={(e)=>(this.password = e.target.value)}
+                                onInput={(e)=>(this.user.password = e.target.value)}
                             />
                             <input
                                 className="form-control"
