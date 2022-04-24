@@ -155,12 +155,12 @@ function Map(props) {
 
     return <>
         <div className="map-container" ref={mapContainerRef}/>
-        <button style={btn} onClick={() => changeMapStyles(MapStyles.Satellite)}>Satellight</button>
-        <button style={btn} onClick={() => changeMapStyles(MapStyles.Light)}>Light</button>
-        <button style={btn} onClick={() => changeMapStyles(MapStyles.Streets)}>Streets</button>
-        <button style={btn} onClick={() => changeLayerVisibility(true)}>V</button>
-        <button style={btn} onClick={() => changeLayerVisibility(false)}>N</button>
-        <button style={btn} onClick={() => showHotelsMarkers()}>Hotels</button>
+        <button className="map_btn" onClick={() => changeMapStyles(MapStyles.Satellite)}>Satellight</button>
+        <button className="map_btn" onClick={() => changeMapStyles(MapStyles.Light)}>Light</button>
+        <button className="map_btn" onClick={() => changeMapStyles(MapStyles.Streets)}>Streets</button>
+        <button className="map_btn" onClick={() => changeLayerVisibility(true)}>V</button>
+        <button className="map_btn" onClick={() => changeLayerVisibility(false)}>N</button>
+        <button className="map_btn" onClick={() => showHotelsMarkers()}>Hotels</button>
     </>;
 }
 

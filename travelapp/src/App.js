@@ -4,14 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Fade} from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import CountryCard from './views/CountryCards/CountryCard';
-import LoginModal from './views/Modal/LoginModal'
-import SignInModal from './views/Modal/SigninModal'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import CountryPage from "./views/ContryPages/CountryPage";
 import {imageHost} from "./constants/constants";
 import ScrollToTop from "./scrollToTop/scrollToTop";
 import {store} from './businessLayer/store';
 import {Provider} from 'react-redux';
+import Header from "./views/Header/Header";
+import Footer from "./views/Footer/Footer";
 
 const fadeImages = [
     imageHost + '/others/hill.jpg',
@@ -112,24 +112,7 @@ function App() {
             <Provider store={store}>
                 <ScrollToTop/>
                 <div className="App">
-                    <header className="header">
-                        <div className="wrapper">
-                            <div className="header_content">
-                                <a href="index.html">
-                                    <div className="logo"></div>
-                                </a>
-                                <ul className="navbar">
-                                    <li className="header_active"><a href="#"></a></li>
-                                    <li className="header_active"><a href="#">About</a></li>
-                                    <li><a href="/">Countries</a></li>
-                                    <li><a href="pages/intermediate_page/map.html">Map</a></li>
-                                    <li><a href="#contact_us">Contact Us</a></li>
-                                </ul>
-                                <LoginModal/>
-                                <SignInModal/>
-                            </div>
-                        </div>
-                    </header>
+                    <Header/>
                     <Route exact path="/" component={CardsPanel}>
                         <section class="first_screen">
                             <div className="wrapper">
@@ -205,101 +188,7 @@ function App() {
                     <Route exact path="/UK" component={() => <CountryPage country={getCardByName('UK')}/>}/>
                     <Route exact path="/USA" component={() => <CountryPage country={getCardByName('USA')}/>}/>
                     <a name="contact_us"></a>
-                    <footer>
-                        <div class="wrapper">
-                            <div class="content">
-                                <div class="footer_navpanel">
-                                    <a href="#about">
-                                        <div class="logo logo_footer"></div>
-                                    </a>
-                                    <ul class="footer_navbar">
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="/">Countries</a></li>
-                                        <li><a href="/">Map</a></li>
-                                        <li><a href="#contact_us">Contact us</a></li>
-                                    </ul>
-                                    <button class="btn_donate_for_volunteers">
-                                        <span>DONATE FOR THE PROJECT</span>
-                                    </button>
-                                </div>
-                                <div class="contact_us">
-                                    <ul class="footer_navbar_vertical">
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="/">Map</a></li>
-                                    </ul>
-                                    <span
-                                        class="contact_us_title">What features do you want to see in the future?</span>
-                                    <form class="contact_us_form" method="POST" onSubmit={(e) => addFeedbackToDb(e)}>
-                                        <input
-                                            class="contact_form_item"
-                                            type="text"
-                                            name="contactName"
-                                            placeholder="Name"
-                                            required=""
-                                            onInput={(e) => (setFeedbackName(e.target.value))}
-                                        />
-                                        <input
-                                            class="contact_form_item"
-                                            type="email"
-                                            name="contactEmail"
-                                            placeholder="Email"
-                                            required=""
-                                            onInput={(e) => (setFeedbackEmail(e.target.value))}
-                                        />
-                                        <fieldset>
-                                            <legend>Please enter your message</legend>
-                                            <textarea class="contact_text_area"
-                                                      onInput={(e) => (setFeedbackText(e.target.value))}></textarea>
-                                        </fieldset>
-                                        <button type="submit" class="btn_contact_submit">
-                                            send
-                                            <img src="assets/icons/arrow_right_submit.svg" alt="send"/>
-                                        </button>
-                                    </form>
-                                </div>
-                                <div class="travel_online_center">
-                                    <span class="online_center_title">Travel online center</span>
-                                    <p class="text color_white">132, Address District, Street</p>
-                                    <p class="text color_white mb-20">Open Daily 10:00 am - 5:00 pm</p>
-                                    <address>
-                                        <a href="tel:7021633433" class="text color_white"
-                                        >T(702) 163-3433</a
-                                        >
-                                    </address>
-                                    <address>
-                                        <a
-                                            href="mailto:zoo.online@gmail.com"
-                                            class="text color_white mb-20"
-                                        >travel.online@gmail.com</a
-                                        >
-                                    </address>
-                                    <ul class="footer_networks">
-                                        <li class="instagram">
-                                            <a href="https://www.instagram.com"></a>
-                                        </li>
-                                        <li class="twitter">
-                                            <a href="https://twitter.com"></a>
-                                        </li>
-                                        <li class="vk">
-                                            <a href="https://vk.com"></a>
-                                        </li>
-                                        <li class="youtube">
-                                            <a href="https://youtube.com"></a>
-                                        </li>
-                                    </ul>
-                                    <button class="btn_donate_for_volunteers">
-                                        <span>DONATE FOR VOLUNTEERS</span>
-                                    </button>
-                                </div>
-                                <div class="footer_copyrights">
-                                    <span class="copyrights_text mt-28">©Galushkin Alexander</span>
-                                    <span class="copyrights_text"
-                                    >©GRSU- 2022</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                    <Footer/>
                 </div>
             </Provider>
         </Router>
