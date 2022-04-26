@@ -8,5 +8,5 @@ import { authorizeReducer} from './AuthorizeReducer';
 // }
 
 export const rootReducer = combineReducers({
-    authorize: authorizeReducer
+    authorization: authorizeReducer
 });

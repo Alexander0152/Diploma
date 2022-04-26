@@ -1,28 +1,26 @@
-import React from 'react'
-import styles from './Modal.module.scss'
+import React, {useState} from 'react'
+import styles from './Modal.scss' // don't delete
 import AccountService from "../../services/accountService";
 
 
-export default class LogInModal extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            isOpen: false,
-            message: ''
-        }
-        this.user = {
-            name: '',
-            email: '',
-            password: '',
-            status: ''
-        };
+function LogInModal() {
 
-        this.accountService = new AccountService();
-    }
+    const [isOpen, setIsOpen] = useState(false);
+    const [message, setMessage] = useState('');
 
-    addUserToDb = (event) => {
+    const user = {
+        name: '',
+        email: '',
+        password: '',
+        status: ''
+    };
+
+    const accountService = new AccountService();
+
+
+    function addUserToDb(event) {
         event.preventDefault();
-        this.accountService.addUser(this.user);
+        accountService.addUser(this.user);
         // try {
         //     let data = {
         //         Name: this.name,
@@ -46,57 +44,59 @@ export default class LogInModal extends React.Component {
         // this.setState({
         //     message: 'You loged in successfully!',
         // })
-    };
-
-    render() {
-        return (
-            <React.Fragment>
-                <button className="btn btn-info btn_login" onClick={() => this.setState({ isOpen: true })}>Login</button>
-                {this.state.isOpen && (<div className={styles.modal}>
-                    <div className={styles.modal_body_login}>
-                        <h1 className="mb-20">Login</h1>
-                        <form class="contact_us_form" method="POST" onSubmit={(e) => this.addUserToDb(e)}>
-                            <input
-                                className="form-control"
-                                type="text"
-                                name="contactName"
-                                placeholder="Name"
-                                required="true"
-                                onInput={(e)=>(this.user.name = e.target.value)}
-                            />
-                            <input
-                                className="form-control"
-                                type="email"
-                                name="Email"
-                                placeholder="Email"
-                                required="true"
-                                onInput={(e)=>(this.user.email = e.target.value)}
-                            />
-                            <input
-                                className="form-control"
-                                type="password"
-                                name="password"
-                                placeholder="Password"
-                                required="true"
-                                onInput={(e)=>(this.user.password = e.target.value)}
-                            />
-                            <input
-                                className="form-control"
-                                type="password"
-                                name="password"
-                                placeholder="Repeate password"
-                                required="true"
-                            />
-                            <button type="submit" className={styles.btn_contact_submit}>
-                                send
-                <img src="assets/icons/arrow_right_submit.svg" alt="send" />
-                            </button>
-                        </form>
-                        <p className={styles.message}>{this.state.message}</p>
-                        <button id='modalClose' className="btn btn-primary" onClick={() => this.setState({ isOpen: false })}>Close</button>
-                    </div>
-                </div>)}
-            </React.Fragment>
-        )
     }
+
+    return (
+        <React.Fragment>
+            <button className="btn btn-info btn_login" onClick={() => setIsOpen(true)}>Login</button>
+            {isOpen && (<div className="modal">
+                <div className="modal_body_login">
+                    <h1 className="mb-20">Login</h1>
+                    <form className="contact_us_form" method="POST" onSubmit={(e) => addUserToDb(e)}>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="contactName"
+                            placeholder="Name"
+                            required="true"
+                            onInput={(e) => (user.name = e.target.value)}
+                        />
+                        <input
+                            className="form-control"
+                            type="email"
+                            name="Email"
+                            placeholder="Email"
+                            required="true"
+                            onInput={(e) => (user.email = e.target.value)}
+                        />
+                        <input
+                            className="form-control"
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            required="true"
+                            onInput={(e) => (user.password = e.target.value)}
+                        />
+                        <input
+                            className="form-control"
+                            type="password"
+                            name="password"
+                            placeholder="Repeate password"
+                            required="true"
+                        />
+                        <button type="submit" className="btn_contact_submit">
+                            send
+                            <img src="assets/icons/arrow_right_submit.svg" alt="send"/>
+                        </button>
+                    </form>
+                    <p className="message">{message}</p>
+                    <button id='modalClose' className="btn btn-primary"
+                            onClick={() => setIsOpen(false)}>Close
+                    </button>
+                </div>
+            </div>)}
+        </React.Fragment>
+    );
 }
+
+export default LogInModal;

@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import CountryPage from "./views/ContryPages/CountryPage";
 import {imageHost} from "./constants/constants";
 import ScrollToTop from "./scrollToTop/scrollToTop";
-import {store} from './businessLayer/store';
+import {store} from './businessLayer/Store';
 import {Provider} from 'react-redux';
 import Header from "./views/Header/Header";
 import Footer from "./views/Footer/Footer";
@@ -20,16 +20,16 @@ const fadeImages = [
 ];
 
 function App() {
-    const [cards, setCards] = React.useState([
+    const [cards, setCards] = useState([
         {countryId: 1, countryName: 'USA', rating: 8.4, numberOfVoters: 300},
         {countryId: 2, countryName: 'Australia', rating: 8.8, numberOfVoters: 300},
         {countryId: 3, countryName: 'France', rating: 5.4, numberOfVoters: 300},
         {countryId: 2, countryName: 'Australia', rating: 8.8, numberOfVoters: 300}
     ]);
 
-    const [feedbackName, setFeedbackName] = React.useState('');
-    const [feedbackEmail, setFeedbackEmail] = React.useState('');
-    const [feedbackText, setFeedbackText] = React.useState('');
+    const [feedbackName, setFeedbackName] = useState('');
+    const [feedbackEmail, setFeedbackEmail] = useState('');
+    const [feedbackText, setFeedbackText] = useState('');
 
     function sortByRating() {
         const sorted = [...cards].sort(function (a, b) {
