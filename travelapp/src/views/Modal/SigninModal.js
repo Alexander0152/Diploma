@@ -3,6 +3,7 @@ import Feedbacks from '../Feedbacks/Feedbacks'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
+import StorageService from "../../services/StorageService";
 
 let message = '';
 let pagePath = '/';
@@ -10,14 +11,17 @@ let pagePath = '/';
 function SignInModal() {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
+    const storageService = new StorageService();
 
     function signIn(event) {
-        alert('worked');
         event.preventDefault();
         // pagePath = '/Feedbacks';
 
+        const user = {};
+        user.name = 'Some Name';
+
         dispatch(changeIsAuthorize(true));
-        alert('worked');
+        storageService.setUser(user);
     }
 
     function setPass() {

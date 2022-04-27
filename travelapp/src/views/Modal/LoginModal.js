@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styles from './Modal.scss' // don't delete
-import AccountService from "../../services/accountService";
+import AccountService from "../../services/AccountService";
 
 
 function LogInModal() {
