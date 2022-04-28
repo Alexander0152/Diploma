@@ -3,7 +3,7 @@ import CountryPageSlider from '../CountryPageSlider/CountryPageSlider'
 import Map from '../Map/Map'
 import RatingWidget from '../RatingWidget/RatingWidget'
 import DataService from "../../services/DataService";
-import Comments from "../comments/Comments";
+import Comments from "../Comments/Comments";
 
 function CountryPage({country}) {
     const [countryInfo, setCountryInfo] = React.useState({

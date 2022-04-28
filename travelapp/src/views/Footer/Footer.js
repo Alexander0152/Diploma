@@ -35,11 +35,11 @@ function Footer() {
             <div className="wrapper">
                 <div className="content">
                     <div className="footer_navpanel">
-                        <a href="#about">
+                        <a href="/">
                             <div className="logo logo_footer"></div>
                         </a>
                         <ul className="footer_navbar">
-                            <li><a href="#">About</a></li>
+                            <li><a href="/">About</a></li>
                             <li><a href="/">Countries</a></li>
                             <li><a href="/">Map</a></li>
                             <li><a href="#contact_us">Contact us</a></li>

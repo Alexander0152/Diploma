@@ -7,3 +7,9 @@ export const MapStyles = {
 }
 
 export const MapAccessToken = 'pk.eyJ1IjoieXVyYTI1MDY5MSIsImEiOiJja203emdiMjIxMnVxMm9tdGxlcDRkZXpyIn0.MBn74R_hf0eodqa26JqMHg';
+
+export const Errors = {
+    account: {
+        noSuchUser: 'There are no such user or Name and Password are incorrect. Please check the entered data.'
+    }
+}

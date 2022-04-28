@@ -10,6 +10,7 @@ function Header() {
     const isAuthorized = useSelector((state) => state.authorization.isAuthorized);
     const dispatch = useDispatch();
     const storageService = new StorageService();
+    const [user, setUser] = useState({name: ''});
 
     function signOut() {
         storageService.removeUser();
@@ -21,15 +22,16 @@ function Header() {
 
         if (loggedUser) {
             dispatch(changeIsAuthorize(true));
+            setUser(JSON.parse(loggedUser));
         }
-
-    }, [])
+    }, [isAuthorized])
 
     return (
         <header className="header">
             <div className="wrapper">
                 <div className="header_content">
-                    <a href="index.html">
+                    <a href="/"
+                    >
                         <div className="logo"/>
                     </a>
                     <ul className="navbar">
@@ -39,7 +41,7 @@ function Header() {
                         <li><a href="/">Map</a></li>
                         <li><a href="#contact_us">Contact Us</a></li>
                     </ul>
-                    {isAuthorized && (<><h3 className="user_name">is ssssssrized</h3>
+                    {isAuthorized && (<><h3 className="user_name">{user.name}</h3>
                         <button className="btn btn-info btn-sign_out" onClick={() => signOut()}>Sign out</button>
                     </>)}
                     {!isAuthorized && <><LoginModal/>

@@ -4,6 +4,9 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
 import StorageService from "../../services/StorageService";
+import {ToastProvider, useToasts} from 'react-toast-notifications';
+import AccountService from "../../services/AccountService";
+import {Errors} from "../../constants/constants";
 
 let message = '';
 let pagePath = '/';
@@ -12,16 +15,31 @@ function SignInModal() {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
     const storageService = new StorageService();
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const accountService = new AccountService();
+
+    const {addToast} = useToasts();
+
+    const user = {
+        name: '',
+    };
+
+    let password;
 
     function signIn(event) {
         event.preventDefault();
         // pagePath = '/Feedbacks';
 
-        const user = {};
-        user.name = 'Some Name';
+        if (!accountService.checkSignInUser(user.name, password)) {
+            setErrorMessage(Errors.account.noSuchUser)
+        }
 
-        dispatch(changeIsAuthorize(true));
-        storageService.setUser(user);
+        // storageService.setUser(user);
+        // dispatch(changeIsAuthorize(true));
+        // setIsOpen(false);
+        //
+        // addToast('Logged in successfully', {appearance: 'success', autoDismiss: true});
     }
 
     function setPass() {
@@ -45,22 +63,25 @@ function SignInModal() {
                                     className="form-control"
                                     type="text"
                                     name="contactName"
+                                    maxLength="30"
                                     placeholder="Name"
-                                    required="true"
+                                    required={true}
+                                    onInput={(e) => (user.name = e.target.value)}
                                 />
                                 <input
                                     className="form-control"
                                     type="password"
                                     name="password"
                                     placeholder="Password"
-                                    required="true"
+                                    required={true}
+                                    onInput={(e) => (password = e.target.value)}
                                 />
                                 <button type="submit" className="btn_contact_submit">
                                     send
                                     <img src="assets/icons/arrow_right_submit.svg" alt="send"/>
                                 </button>
                             </form>
-                            <p className="message">{message}</p>
+                            <p className="message">{errorMessage}</p>
                             <button id='modalClose' className="btn btn-primary"
                                     onClick={() => setIsOpen(false)}>Close
                             </button>

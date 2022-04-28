@@ -12,6 +12,7 @@ import {store} from './businessLayer/Store';
 import {Provider} from 'react-redux';
 import Header from "./views/Header/Header";
 import Footer from "./views/Footer/Footer";
+import { ToastProvider } from 'react-toast-notifications';
 
 const fadeImages = [
     imageHost + '/others/hill.jpg',
@@ -110,6 +111,7 @@ function App() {
     return (
         <Router>
             <Provider store={store}>
+                <ToastProvider>
                 <ScrollToTop/>
                 <div className="App">
                     <Header/>
@@ -190,6 +192,7 @@ function App() {
                     <a name="contact_us"></a>
                     <Footer/>
                 </div>
+                </ToastProvider>
             </Provider>
         </Router>
     );

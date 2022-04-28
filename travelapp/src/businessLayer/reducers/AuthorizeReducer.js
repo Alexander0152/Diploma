@@ -1,5 +1,6 @@
 const initialState = {
     isAuthorized: false,
+    user: {}
 };
 
 export const authorizeReducer = (state = initialState, action) => {

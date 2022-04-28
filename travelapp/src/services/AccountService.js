@@ -1,5 +1,24 @@
 class AccountService {
 
+    checkSignInUser(userName, password){
+        try {
+            let data = {
+                Name: userName,
+                Password: password,
+            };
+            fetch('api/users/CheckUser', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+
+        } catch (e) {
+        }
+        return false;
+    }
+
     addUser(user) {
         // event.preventDefault();
         try {

@@ -57,6 +57,19 @@ namespace TravelAppServer.Controllers
             db.Users.Add(user);
             await db.SaveChangesAsync();    
             return Ok(user);
+        }     
+        
+        [HttpPost("[action]")]
+        public async Task<ActionResult<User>> CheckUser([FromBody] User user, string userName, string password)
+        {
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            db.Users.Add(user);
+            await db.SaveChangesAsync();    
+            return Ok(user);
         }
 
         // PUT api/users/

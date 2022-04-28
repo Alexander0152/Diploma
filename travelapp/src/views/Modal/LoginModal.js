@@ -12,7 +12,7 @@ function LogInModal() {
         name: '',
         email: '',
         password: '',
-        status: ''
+        status: 'user'
     };
 
     const accountService = new AccountService();
@@ -20,7 +20,7 @@ function LogInModal() {
 
     function addUserToDb(event) {
         event.preventDefault();
-        accountService.addUser(this.user);
+        accountService.addUser(user);
         // try {
         //     let data = {
         //         Name: this.name,
@@ -57,8 +57,9 @@ function LogInModal() {
                             className="form-control"
                             type="text"
                             name="contactName"
+                            maxLength="30"
                             placeholder="Name"
-                            required="true"
+                            required={true}
                             onInput={(e) => (user.name = e.target.value)}
                         />
                         <input
@@ -66,7 +67,7 @@ function LogInModal() {
                             type="email"
                             name="Email"
                             placeholder="Email"
-                            required="true"
+                            required={true}
                             onInput={(e) => (user.email = e.target.value)}
                         />
                         <input
@@ -74,7 +75,7 @@ function LogInModal() {
                             type="password"
                             name="password"
                             placeholder="Password"
-                            required="true"
+                            required={true}
                             onInput={(e) => (user.password = e.target.value)}
                         />
                         <input
@@ -82,7 +83,7 @@ function LogInModal() {
                             type="password"
                             name="password"
                             placeholder="Repeate password"
-                            required="true"
+                            required={true}
                         />
                         <button type="submit" className="btn_contact_submit">
                             send
