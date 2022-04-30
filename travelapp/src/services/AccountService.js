@@ -1,22 +1,27 @@
 class AccountService {
 
-    checkSignInUser(userName, password){
-        try {
-            let data = {
-                Name: userName,
-                Password: password,
-            };
-            fetch('api/users/CheckUser', {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
+    checkSignInUser(userName, password) {
+        let data = {
+            Name: userName,
+            Password: password,
+        };
 
-        } catch (e) {
-        }
-        return false;
+        return fetch('api/users/CheckUser', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(res => res.json())
+            .then(
+                (result) => {
+                    return !!result;
+                },
+                (error) => {
+                    console.log(error);
+                    return false;
+                }
+            );
     }
 
     addUser(user) {

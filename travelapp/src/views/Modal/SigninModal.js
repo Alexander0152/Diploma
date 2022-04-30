@@ -13,6 +13,8 @@ let pagePath = '/';
 
 function SignInModal() {
     const [isOpen, setIsOpen] = useState(false);
+    const [userName, setUserName] = useState('');
+    const [userPassword, setUserPassword] = useState('');
     const dispatch = useDispatch();
     const storageService = new StorageService();
     const [errorMessage, setErrorMessage] = useState('');
@@ -21,29 +23,31 @@ function SignInModal() {
 
     const {addToast} = useToasts();
 
-    const user = {
-        name: '',
-    };
-
-    let password;
-
     function signIn(event) {
         event.preventDefault();
         // pagePath = '/Feedbacks';
 
-        if (!accountService.checkSignInUser(user.name, password)) {
-            setErrorMessage(Errors.account.noSuchUser)
-        }
-
+        accountService.checkSignInUser(userName, userPassword).then((res) => {
+            if (!res) {
+                setErrorMessage(Errors.account.noSuchUser)
+            } else {
+                addToast('Signed in successfully', {appearance: 'success', autoDismiss: true});
+                closeModel();
+            }
+        });
         // storageService.setUser(user);
         // dispatch(changeIsAuthorize(true));
         // setIsOpen(false);
         //
-        // addToast('Logged in successfully', {appearance: 'success', autoDismiss: true});
     }
 
     function setPass() {
         pagePath = '/Feedbacks';
+    }
+
+    function closeModel() {
+        setIsOpen(false);
+        setErrorMessage(null);
     }
 
     // useEffect(() => {
@@ -66,7 +70,8 @@ function SignInModal() {
                                     maxLength="30"
                                     placeholder="Name"
                                     required={true}
-                                    onInput={(e) => (user.name = e.target.value)}
+                                    value={userName}
+                                    onChange={(e) => (setUserName(e.target.value))}
                                 />
                                 <input
                                     className="form-control"
@@ -74,7 +79,8 @@ function SignInModal() {
                                     name="password"
                                     placeholder="Password"
                                     required={true}
-                                    onInput={(e) => (password = e.target.value)}
+                                    value={userPassword}
+                                    onChange={(e) => (setUserPassword(e.target.value))}
                                 />
                                 <button type="submit" className="btn_contact_submit">
                                     send
@@ -83,7 +89,7 @@ function SignInModal() {
                             </form>
                             <p className="message">{errorMessage}</p>
                             <button id='modalClose' className="btn btn-primary"
-                                    onClick={() => setIsOpen(false)}>Close
+                                    onClick={() => closeModel()}>Close
                             </button>
                         </div>
                     </Route>

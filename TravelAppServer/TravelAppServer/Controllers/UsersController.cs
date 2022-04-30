@@ -60,16 +60,21 @@ namespace TravelAppServer.Controllers
         }     
         
         [HttpPost("[action]")]
-        public async Task<ActionResult<User>> CheckUser([FromBody] User user, string userName, string password)
+        public async Task<ActionResult<User>> CheckUser([FromBody] User user)
         {
             if (user == null)
             {
                 return BadRequest();
             }
 
-            db.Users.Add(user);
-            await db.SaveChangesAsync();    
-            return Ok(user);
+            User dBUser = await db.Users.FirstOrDefaultAsync(x => x.Name == user.Name);
+
+            if (dBUser == null || dBUser.Password != user.Password)
+            {
+                return new ObjectResult(false);
+            }
+
+            return new ObjectResult(true);
         }
 
         // PUT api/users/
