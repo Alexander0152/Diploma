@@ -8,9 +8,9 @@ import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
 
 function Header() {
     const isAuthorized = useSelector((state) => state.authorization.isAuthorized);
+    const user = useSelector((state) => state.authorization.user);
     const dispatch = useDispatch();
     const storageService = new StorageService();
-    const [user, setUser] = useState({name: ''});
 
     function signOut() {
         storageService.removeUser();
@@ -21,8 +21,7 @@ function Header() {
         const loggedUser = storageService.getUser();
 
         if (loggedUser) {
-            dispatch(changeIsAuthorize(true));
-            setUser(JSON.parse(loggedUser));
+            dispatch(changeIsAuthorize(true, JSON.parse(loggedUser)));
         }
     }, [isAuthorized])
 
@@ -44,7 +43,8 @@ function Header() {
                     {isAuthorized && (<><h3 className="user_name">{user.name}</h3>
                         <button className="btn btn-info btn-sign_out" onClick={() => signOut()}>Sign out</button>
                     </>)}
-                    {!isAuthorized && <><LoginModal/>
+                    {!isAuthorized && <>
+                        <LoginModal/>
                         <SignInModal/></>}
                 </div>
             </div>

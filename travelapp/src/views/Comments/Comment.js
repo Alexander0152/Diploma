@@ -1,112 +1,149 @@
 import CommentForm from "./CommentForm";
-import {imageHost} from "../../constants/constants";
+import {imageHost, Notifications, UserStatus} from "../../constants/constants";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
+import StorageService from "../../services/StorageService";
+import {useToasts} from "react-toast-notifications";
 
 const Comment = ({
-  comment,
-  replies,
-  setActiveComment,
-  activeComment,
-  updateComment,
-  deleteComment,
-  addComment,
-  parentId = null,
-  currentUserId,
-}) => {
-  const isEditing =
-    activeComment &&
-    activeComment.id === comment.id &&
-    activeComment.type === "editing";
-  const isReplying =
-    activeComment &&
-    activeComment.id === comment.id &&
-    activeComment.type === "replying";
-  const fiveMinutes = 300000;
-  const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
-  const canDelete =
-    currentUserId === comment.userId && replies.length === 0 && !timePassed;
-  const canReply = Boolean(currentUserId);
-  const canEdit = currentUserId === comment.userId && !timePassed;
-  const replyId = parentId ? parentId : comment.id;
-  const createdAt = new Date(comment.createdAt).toLocaleDateString();
-  return (
-    <div key={comment.id} className="comment">
-      <div className="comment-image-container">
-        <img src={imageHost + '/others/avatar.png'} />
-      </div>
-      <div className="comment-right-part">
-        <div className="comment-content">
-          <div className="comment-author">{comment.username}</div>
-          <div>{createdAt}</div>
+                     comment,
+                     replies,
+                     setActiveComment,
+                     activeComment,
+                     updateComment,
+                     deleteComment,
+                     addComment,
+                     parentId = null,
+                     currentUserId,
+                 }) => {
+    const isEditing =
+        activeComment &&
+        activeComment.id === comment.id &&
+        activeComment.type === "editing";
+    const isReplying =
+        activeComment &&
+        activeComment.id === comment.id &&
+        activeComment.type === "replying";
+    const fiveMinutes = 300000;
+    const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
+    const canDelete =
+        currentUserId === comment.userId && replies.length === 0 && !timePassed;
+    const canReply = Boolean(currentUserId);
+    const canEdit = currentUserId === comment.userId && !timePassed;
+    const replyId = parentId ? parentId : comment.id;
+    const createdAt = new Date(comment.createdAt).toLocaleDateString();
+
+    const user = useSelector((state) => state.authorization.user);
+    const isAuthorized = useSelector((state) => state.authorization.isAuthorized);
+    const dispatch = useDispatch();
+    const storageService = new StorageService();
+
+    const {addToast} = useToasts();
+
+    useEffect(() => {
+        const loggedUser = storageService.getUser();
+
+        if (loggedUser) {
+            dispatch(changeIsAuthorize(true, JSON.parse(loggedUser)));
+        }
+    }, [isAuthorized]);
+
+    function showNotAuthorized() {
+        addToast(Notifications.account.rejectUnauthorized, {
+            appearance: 'info',
+            autoDismiss: true
+        })
+    }
+
+    return (
+        <div key={comment.id} className="comment">
+            <div className="comment-image-container">
+                <img src={imageHost + '/others/avatar.png'}/>
+            </div>
+            <div className="comment-right-part">
+                <div className="comment-content">
+                    <div className="comment-author">{comment.username}</div>
+                    <div>{createdAt}</div>
+                </div>
+                {!isEditing && <div className="comment-text">{comment.body}</div>}
+                {isEditing && (
+                    <CommentForm
+                        submitLabel="Update"
+                        hasCancelButton
+                        initialText={comment.body}
+                        handleSubmit={(text) => updateComment(text, comment.id)}
+                        handleCancel={() => {
+                            setActiveComment(null);
+                        }}
+                    />
+                )}
+                <div className="comment-actions">
+                    {canReply && !isAuthorized && (
+                        <div
+                            className="comment-action"
+                            onClick={() => showNotAuthorized()
+                            }
+                        >
+                            Reply
+                        </div>
+                    )}
+                    {canReply && isAuthorized && (
+                        <div
+                            className="comment-action"
+                            onClick={() =>
+                                setActiveComment({id: comment.id, type: "replying"})
+                            }
+                        >
+                            Reply
+                        </div>
+                    )}
+                    {canEdit && (
+                        <div
+                            className="comment-action"
+                            onClick={() =>
+                                setActiveComment({id: comment.id, type: "editing"})
+                            }
+                        >
+                            Edit
+                        </div>
+                    )}
+                    {(canDelete || user.status === UserStatus.ADMIN) && (
+                        <div
+                            className="comment-action"
+                            onClick={() => deleteComment(comment.id)}
+                        >
+                            Delete
+                        </div>
+                    )}
+                </div>
+                {isReplying && (
+                    <CommentForm
+                        submitLabel="Reply"
+                        handleSubmit={(text) => addComment(text, replyId)}
+                    />
+                )}
+                {replies.length > 0 && (
+                    <div className="replies">
+                        {replies.map((reply) => (
+                            <Comment
+                                comment={reply}
+                                key={reply.id}
+                                setActiveComment={setActiveComment}
+                                activeComment={activeComment}
+                                updateComment={updateComment}
+                                deleteComment={deleteComment}
+                                addComment={addComment}
+                                parentId={comment.id}
+                                replies={[]}
+                                currentUserId={currentUserId}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
-        {!isEditing && <div className="comment-text">{comment.body}</div>}
-        {isEditing && (
-          <CommentForm
-            submitLabel="Update"
-            hasCancelButton
-            initialText={comment.body}
-            handleSubmit={(text) => updateComment(text, comment.id)}
-            handleCancel={() => {
-              setActiveComment(null);
-            }}
-          />
-        )}
-        <div className="comment-actions">
-          {canReply && (
-            <div
-              className="comment-action"
-              onClick={() =>
-                setActiveComment({ id: comment.id, type: "replying" })
-              }
-            >
-              Reply
-            </div>
-          )}
-          {canEdit && (
-            <div
-              className="comment-action"
-              onClick={() =>
-                setActiveComment({ id: comment.id, type: "editing" })
-              }
-            >
-              Edit
-            </div>
-          )}
-          {canDelete && (
-            <div
-              className="comment-action"
-              onClick={() => deleteComment(comment.id)}
-            >
-              Delete
-            </div>
-          )}
-        </div>
-        {isReplying && (
-          <CommentForm
-            submitLabel="Reply"
-            handleSubmit={(text) => addComment(text, replyId)}
-          />
-        )}
-        {replies.length > 0 && (
-          <div className="replies">
-            {replies.map((reply) => (
-              <Comment
-                comment={reply}
-                key={reply.id}
-                setActiveComment={setActiveComment}
-                activeComment={activeComment}
-                updateComment={updateComment}
-                deleteComment={deleteComment}
-                addComment={addComment}
-                parentId={comment.id}
-                replies={[]}
-                currentUserId={currentUserId}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Comment;

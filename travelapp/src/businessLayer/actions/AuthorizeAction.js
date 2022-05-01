@@ -1,4 +1,7 @@
-export const changeIsAuthorize = (isAuthorized) => ({
+export const changeIsAuthorize = (isAuthorized, user = {}) => ({
     type: 'AUTHORIZE',
-    payload: isAuthorized,
+    payload: {
+        isAuthorized: isAuthorized,
+        user: user
+    },
 });

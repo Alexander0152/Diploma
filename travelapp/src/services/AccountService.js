@@ -15,7 +15,7 @@ class AccountService {
         }).then(res => res.json())
             .then(
                 (result) => {
-                    return !!result;
+                    return result;
                 },
                 (error) => {
                     console.log(error);

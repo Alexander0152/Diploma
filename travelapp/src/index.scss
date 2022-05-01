@@ -185,8 +185,9 @@ footer .content {
   &__content {
     min-height: 55px !important;
     font-size: 18px !important;
-    line-height: 2 !important;
+    //line-height: 2 !important;
     font-weight: bold;
+    padding: 12px 12px !important;
   }
 
   &__icon {

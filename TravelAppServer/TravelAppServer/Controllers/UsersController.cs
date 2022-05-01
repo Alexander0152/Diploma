@@ -74,6 +74,16 @@ namespace TravelAppServer.Controllers
                 return new ObjectResult(false);
             }
 
+            if (dBUser.Status == "user")
+            {
+                return new ObjectResult("{\"status\":\"user\"}");
+            }          
+            
+            if (dBUser.Status == "admin")
+            {
+                return new ObjectResult("{\"status\":\"admin\"}");
+            }
+
             return new ObjectResult(true);
         }
 
