@@ -8,7 +8,7 @@ import {
   deleteComment as deleteCommentApi,
 } from "../../services/CommentsService";
 
-const Comments = ({ commentsUrl, currentUserId }) => {
+const Comments = ({ commentsUrl }) => {
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
   const rootComments = backendComments.filter(
@@ -21,6 +21,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
         (a, b) =>
           new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
       );
+
   const addComment = (text, parentId) => {
     createCommentApi(text, parentId).then((comment) => {
       setBackendComments([comment, ...backendComments]);
@@ -40,6 +41,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       setActiveComment(null);
     });
   };
+
   const deleteComment = (commentId) => {
     if (window.confirm("Are you sure you want to remove comment?")) {
       deleteCommentApi().then(() => {
@@ -73,7 +75,6 @@ const Comments = ({ commentsUrl, currentUserId }) => {
             addComment={addComment}
             deleteComment={deleteComment}
             updateComment={updateComment}
-            currentUserId={currentUserId}
           />
         ))}
       </div>

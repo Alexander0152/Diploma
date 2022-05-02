@@ -23,7 +23,7 @@ function Header() {
         if (loggedUser) {
             dispatch(changeIsAuthorize(true, JSON.parse(loggedUser)));
         }
-    }, [isAuthorized])
+    }, [])
 
     return (
         <header className="header">

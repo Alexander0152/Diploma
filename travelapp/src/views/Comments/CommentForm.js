@@ -25,7 +25,7 @@ const CommentForm = ({
         if (loggedUser) {
             dispatch(changeIsAuthorize(true, JSON.parse(loggedUser)));
         }
-    }, [isAuthorized])
+    }, [])
 
     const [text, setText] = useState(initialText);
     const isTextareaDisabled = text.length === 0;

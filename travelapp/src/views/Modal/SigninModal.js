@@ -33,11 +33,12 @@ function SignInModal() {
                 setErrorMessage(Notifications.account.noSuchUser)
             } else {
                 const user = {
-                    name: userName,
-                    status: null
+                    id: res.id,
+                    name: res.name,
+                    email: res.email,
+                    status: res.status,
                 };
 
-                user.status = res.status;
                 dispatch(changeIsAuthorize(true, user));
                 storageService.setUser(user);
 
