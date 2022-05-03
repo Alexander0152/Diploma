@@ -8,8 +8,10 @@ namespace TravelAppServer.Models
     public class Feedback
     {
         public int Id { get; set; }
+        public int ParentId { get; set; }
         public int UserId { get; set; }
         public int CountryId { get; set; }
         public string FeedbackText { get; set; }
+        public DateTime Date { get; set; }
     }
 }

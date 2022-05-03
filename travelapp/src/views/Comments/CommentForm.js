@@ -14,6 +14,7 @@ const CommentForm = ({
                      }) => {
 
     const isAuthorized = useSelector((state) => state.authorization.isAuthorized);
+    const user = useSelector((state) => state.authorization.user);
     const dispatch = useDispatch();
     const storageService = new StorageService();
 
@@ -31,7 +32,7 @@ const CommentForm = ({
     const isTextareaDisabled = text.length === 0;
     const onSubmit = (event) => {
         event.preventDefault();
-        handleSubmit(text);
+        handleSubmit(text, null, user);
         setText("");
     };
 

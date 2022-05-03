@@ -35,13 +35,30 @@ export const getComments = async () => {
     ];
 };
 
-export const createComment = async (text, parentId = null) => {
+export const createComment = async (text, parentId = null, countryId, user) => {
+
+    // return fetch(`/api/feedbacks/addfeedback/${countryName}`, {
+    //     method: 'GET',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //     }
+    // })
+    //     .then(res => res.json())
+    //     .then(
+    //         (result) => {
+    //             return result;
+    //         },
+    //         (error) => {
+    //             console.log(error);
+    //         }
+    //     );
     return {
         id: Math.random().toString(36).substr(2, 9),
         body: text,
         parentId,
-        userId: 1,
-        username: "John",
+        userId: user.id,
+        username: user.name,
         createdAt: new Date().toISOString(),
     };
 };

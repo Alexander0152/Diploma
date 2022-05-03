@@ -34,7 +34,6 @@ const Comment = ({
 
     const canDelete =
         user.id === comment.userId && replies.length === 0 && !timePassed;
-    const canReply = Boolean(user.id);
     const canEdit = user.id === comment.userId && !timePassed;
     const replyId = parentId ? parentId : comment.id;
     const createdAt = new Date(comment.createdAt).toLocaleDateString();
@@ -81,16 +80,14 @@ const Comment = ({
                 )}
 
                 {isAuthorized ? <div className="comment-actions">
-                        {canReply && (
-                            <div
-                                className="comment-action"
-                                onClick={() =>
-                                    setActiveComment({id: comment.id, type: "replying"})
-                                }
-                            >
-                                Reply
-                            </div>
-                        )}
+                        <div
+                            className="comment-action"
+                            onClick={() =>
+                                setActiveComment({id: comment.id, type: "replying"})
+                            }
+                        >
+                            Reply
+                        </div>
                         {canEdit && (
                             <div
                                 className="comment-action"
@@ -112,22 +109,20 @@ const Comment = ({
                     </div> :
 
                     <div className="comment-actions">
-                        {canReply && (
-                            <div
-                                className="comment-action"
-                                onClick={() => showNotAuthorized()
-                                }
-                            >
-                                Reply
-                            </div>
-                        )}
+                        <div
+                            className="comment-action"
+                            onClick={() => showNotAuthorized()
+                            }
+                        >
+                            Reply
+                        </div>
                     </div>
                 }
 
                 {isReplying && (
                     <CommentForm
                         submitLabel="Reply"
-                        handleSubmit={(text) => addComment(text, replyId)}
+                        handleSubmit={(text) => addComment(text, replyId, user)}
                     />
                 )}
                 {replies.length > 0 && (
