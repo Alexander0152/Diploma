@@ -24,7 +24,8 @@ const Comments = ({commentsUrl, countryId}) => {
 
     const addComment = (text, parentId, user) => {
         createCommentApi(text, parentId, countryId, user).then((comment) => {
-            setBackendComments([comment, ...backendComments]);
+            // setBackendComments([comment]);
+            // setBackendComments([comment, ...backendComments]);
             setActiveComment(null);
         });
     };

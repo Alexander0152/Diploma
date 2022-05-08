@@ -65,7 +65,7 @@ function CountryPage({country}) {
                 </main>
             </div>
             <Comments
-                countryId={country.countryId}
+                countryId={country?.countryId}
                 commentsUrl="http://localhost:3004/comments"
             />
         </section>
