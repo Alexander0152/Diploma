@@ -25,7 +25,7 @@ const Comment = ({
         activeComment.id === comment.id &&
         activeComment.type === "replying";
     const fiveMinutes = 300000;
-    const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
+    const timePassed = new Date() - new Date(comment.date) > fiveMinutes;
 
     const isAuthorized = useSelector((state) => state.authorization.isAuthorized);
     const user = useSelector((state) => state.authorization.user);
@@ -36,7 +36,7 @@ const Comment = ({
         user.id === comment.userId && replies.length === 0 && !timePassed;
     const canEdit = user.id === comment.userId && !timePassed;
     const replyId = parentId ? parentId : comment.id;
-    const createdAt = new Date(comment.createdAt).toLocaleDateString();
+    const createdAt = new Date(comment.date).toLocaleDateString();
 
     const {addToast} = useToasts();
 
@@ -63,15 +63,15 @@ const Comment = ({
             </div>
             <div className="comment-right-part">
                 <div className="comment-content">
-                    <div className="comment-author">{comment.username}</div>
+                    <div className="comment-author">{comment.userName}</div>
                     <div>{createdAt}</div>
                 </div>
-                {!isEditing && <div className="comment-text">{comment.body}</div>}
+                {!isEditing && <div className="comment-text">{comment.feedbackText}</div>}
                 {isEditing && (
                     <CommentForm
                         submitLabel="Update"
                         hasCancelButton
-                        initialText={comment.body}
+                        initialText={comment.feedbackText}
                         handleSubmit={(text) => updateComment(text, comment.id)}
                         handleCancel={() => {
                             setActiveComment(null);

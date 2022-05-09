@@ -11,7 +11,7 @@ import {
 const Comments = ({commentsUrl, countryId}) => {
     const [backendComments, setBackendComments] = useState([]);
     const [activeComment, setActiveComment] = useState(null);
-    const rootComments = backendComments.filter(
+    const rootComments = backendComments?.filter(
         (backendComment) => backendComment.parentId === null
     );
     const getReplies = (commentId) =>
@@ -19,12 +19,12 @@ const Comments = ({commentsUrl, countryId}) => {
             .filter((backendComment) => backendComment.parentId === commentId)
             .sort(
                 (a, b) =>
-                    new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+                    new Date(a.date).getTime() - new Date(b.date).getTime()
             );
 
     const addComment = (text, parentId, user) => {
         createCommentApi(text, parentId, countryId, user).then((comment) => {
-            // setBackendComments([comment]);
+            setBackendComments([comment]);
             // setBackendComments([comment, ...backendComments]);
             setActiveComment(null);
         });
@@ -34,7 +34,7 @@ const Comments = ({commentsUrl, countryId}) => {
         updateCommentApi(text).then(() => {
             const updatedBackendComments = backendComments.map((backendComment) => {
                 if (backendComment.id === commentId) {
-                    return {...backendComment, body: text};
+                    return {...backendComment, feedbackText: text};
                 }
                 return backendComment;
             });
@@ -66,7 +66,7 @@ const Comments = ({commentsUrl, countryId}) => {
             <div className="comment-form-title">Write feedback</div>
             <CommentForm submitLabel="Write" handleSubmit={addComment}/>
             <div className="comments-container">
-                {rootComments.map((rootComment) => (
+                {rootComments?.map((rootComment) => (
                     <Comment
                         key={rootComment.id}
                         comment={rootComment}

@@ -1,38 +1,56 @@
-export const getComments = async () => {
-    return [
-        {
-            id: 1,
-            body: "First comment",
-            username: "Jack",
-            userId: 1,
-            parentId: null,
-            createdAt: "2021-08-16T23:00:33.010+02:00",
-        },
-        {
-            id: 2,
-            body: "Second comment",
-            username: "John",
-            userId: 2,
-            parentId: null,
-            createdAt: "2021-08-16T23:00:33.010+02:00",
-        },
-        {
-            id: 3,
-            body: "First comment first child",
-            username: "John",
-            userId: 2,
-            parentId: 1,
-            createdAt: "2021-08-16T23:00:33.010+02:00",
-        },
-        {
-            id: 4,
-            body: "Second comment second child",
-            username: "John",
-            userId: 2,
-            parentId: 2,
-            createdAt: "2021-08-16T23:00:33.010+02:00",
-        },
-    ];
+export const getComments = async (countryCode) => {
+    if (!countryCode) return;
+
+    return fetch(`/api/feedbacks/GetFeedbacks?countryCode=${countryCode}`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(res => res.json())
+        .then(
+            (result) => {
+                return result;
+            },
+            (error) => {
+                console.log(error);
+            }
+        );
+    // return [
+    //     {
+    //         id: 1,
+    //         body: "First comment",
+    //         username: "Jack",
+    //         userId: 1,
+    //         parentId: null,
+    //         createdAt: "2021-08-16T23:00:33.010+02:00",
+    //     },
+    //     {
+    //         id: 2,
+    //         body: "Second comment",
+    //         username: "John",
+    //         userId: 2,
+    //         parentId: null,
+    //         createdAt: "2021-08-16T23:00:33.010+02:00",
+    //     },
+    //     {
+    //         id: 3,
+    //         body: "First comment first child",
+    //         username: "John",
+    //         userId: 2,
+    //         parentId: 1,
+    //         createdAt: "2021-08-16T23:00:33.010+02:00",
+    //     },
+    //     {
+    //         id: 4,
+    //         body: "Second comment second child",
+    //         username: "John",
+    //         userId: 2,
+    //         parentId: 2,
+    //         createdAt: "2021-08-16T23:00:33.010+02:00",
+    //     },
+    // ];
 };
 
 export const createComment = async (text, parentId = null, countryId, user) => {
@@ -43,7 +61,7 @@ export const createComment = async (text, parentId = null, countryId, user) => {
         UserId: user.id,
         CountryId: countryId,
         FeedbackText: text,
-        // Date:  new Date().toISOString()
+        Date: new Date().toISOString()
     };
 
     return fetch(`/api/feedbacks/AddFeedback`, {
@@ -62,14 +80,6 @@ export const createComment = async (text, parentId = null, countryId, user) => {
                 console.log(error);
             }
         );
-    // return {
-    //     id: Math.random().toString(36).substr(2, 9),
-    //     body: text,
-    //     parentId,
-    //     userId: user.id,
-    //     username: user.name,
-    //     createdAt: new Date().toISOString(),
-    // };
 };
 
 export const updateComment = async (text) => {
