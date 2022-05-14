@@ -55,8 +55,11 @@ const Comments = ({commentsUrl, countryId}) => {
     };
 
     useEffect(() => {
-        getCommentsApi().then((data) => {
-            setBackendComments(data);
+        if(!countryId){
+            return;
+        }
+        getCommentsApi(countryId).then((data) => {
+            // setBackendComments(data);
         });
     }, []);
 

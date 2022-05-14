@@ -1,7 +1,7 @@
-export const getComments = async (countryCode) => {
-    if (!countryCode) return;
+export const getComments = async (countryId) => {
+    if (!countryId) return;
 
-    return fetch(`/api/feedbacks/GetFeedbacks?countryCode=${countryCode}`, {
+    return fetch(`/api/feedbacks/GetFeedbacks?countryId=${countryId}`, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
