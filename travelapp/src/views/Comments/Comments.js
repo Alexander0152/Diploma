@@ -23,10 +23,12 @@ const Comments = ({commentsUrl, countryId}) => {
             );
 
     const addComment = (text, parentId, user) => {
-        createCommentApi(text, parentId, countryId, user).then((comment) => {
-            setBackendComments([comment]);
-            // setBackendComments([comment, ...backendComments]);
+        createCommentApi(text, parentId, countryId, user).then(() => {
             setActiveComment(null);
+
+            getCommentsApi(countryId).then((data) => {
+                setBackendComments(data);
+            });
         });
     };
 
@@ -59,7 +61,7 @@ const Comments = ({commentsUrl, countryId}) => {
             return;
         }
         getCommentsApi(countryId).then((data) => {
-            // setBackendComments(data);
+            setBackendComments(data);
         });
     }, []);
 

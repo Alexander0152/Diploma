@@ -123,11 +123,15 @@ const Comment = ({
                     <CommentForm
                         submitLabel="Reply"
                         handleSubmit={(text) => addComment(text, replyId, user)}
+                        hasCancelButton={true}
+                        handleCancel={() => {
+                            setActiveComment(null);
+                        }}
                     />
                 )}
-                {replies.length > 0 && (
+                {comment.replies?.length > 0 && (
                     <div className="replies">
-                        {replies.map((reply) => (
+                        {comment.replies.map((reply) => (
                             <Comment
                                 comment={reply}
                                 key={reply.id}

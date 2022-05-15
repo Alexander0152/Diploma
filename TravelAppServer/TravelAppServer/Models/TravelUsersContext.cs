@@ -46,11 +46,11 @@ namespace TravelAppServer.Models
             modelBuilder.Entity<Feedback>().ToTable("Feedbacks");
 
             modelBuilder.Entity<Feedback>().Property(u => u.Id).HasColumnType("int").UseMySqlIdentityColumn().IsRequired();
-            modelBuilder.Entity<Feedback>().Property(u => u.ParentId).HasColumnType("int").IsRequired();
+            modelBuilder.Entity<Feedback>().Property(u => u.ParentId).HasColumnType("int");
             modelBuilder.Entity<Feedback>().Property(u => u.UserId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Feedback>().Property(u => u.CountryId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Feedback>().Property(u => u.FeedbackText).HasColumnType("nvarchar(1000)").IsRequired();
-            modelBuilder.Entity<Feedback>().Property(u => u.Date).HasColumnType("datetime").IsRequired();
+            modelBuilder.Entity<Feedback>().Property(u => u.Date).HasColumnType("DateTime").IsRequired();
             
             modelBuilder.Entity<Hotel>().ToTable("Hotels");
 

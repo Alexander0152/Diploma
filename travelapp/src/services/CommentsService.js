@@ -56,7 +56,6 @@ export const getComments = async (countryId) => {
 export const createComment = async (text, parentId = null, countryId, user) => {
 
     const data = {
-        Id: null,
         ParentId: parentId,
         UserId: user.id,
         CountryId: countryId,
