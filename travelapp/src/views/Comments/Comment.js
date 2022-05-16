@@ -34,7 +34,7 @@ const Comment = ({
 
     const canDelete =
         user.id === comment.userId && replies.length === 0 && !timePassed;
-    const canEdit = user.id === comment.userId && !timePassed;
+    const canEdit = user.id === comment.userId;
     const replyId = parentId ? parentId : comment.id;
     const createdAt = new Date(comment.date).toLocaleDateString();
 
