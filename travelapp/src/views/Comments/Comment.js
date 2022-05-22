@@ -72,7 +72,7 @@ const Comment = ({
                         submitLabel="Update"
                         hasCancelButton
                         initialText={comment.feedbackText}
-                        handleSubmit={(text) => updateComment(text, comment.id)}
+                        handleSubmit={(text) => updateComment( comment.id, text)}
                         handleCancel={() => {
                             setActiveComment(null);
                         }}

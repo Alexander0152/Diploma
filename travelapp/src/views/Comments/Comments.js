@@ -32,32 +32,26 @@ const Comments = ({commentsUrl, countryId}) => {
         });
     };
 
-    const updateComment = (text, commentId) => {
-        updateCommentApi(text).then(() => {
-            const updatedBackendComments = backendComments.map((backendComment) => {
-                if (backendComment.id === commentId) {
-                    return {...backendComment, feedbackText: text};
-                }
-                return backendComment;
+    const updateComment = (commentId, newText) => {
+        updateCommentApi(commentId, newText).then(() => {
+            getCommentsApi(countryId).then((data) => {
+                setActiveComment(null);
+                setBackendComments(data);
             });
-            setBackendComments(updatedBackendComments);
-            setActiveComment(null);
         });
     };
 
     const deleteComment = (commentId) => {
-        if (window.confirm("Are you sure you want to remove comment?")) {
-            deleteCommentApi().then(() => {
-                const updatedBackendComments = backendComments.filter(
-                    (backendComment) => backendComment.id !== commentId
-                );
-                setBackendComments(updatedBackendComments);
+        deleteCommentApi(commentId).then(() => {
+
+            getCommentsApi(countryId).then((data) => {
+                setBackendComments(data);
             });
-        }
+        });
     };
 
     useEffect(() => {
-        if(!countryId){
+        if (!countryId) {
             return;
         }
         getCommentsApi(countryId).then((data) => {
