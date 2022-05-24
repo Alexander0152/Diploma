@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import Feedbacks from '../Feedbacks/Feedbacks'
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
 import StorageService from "../../services/StorageService";
-import {ToastProvider, useToasts} from 'react-toast-notifications';
+import {useToasts} from 'react-toast-notifications';
 import AccountService from "../../services/AccountService";
-import {Notifications, UserStatus} from "../../constants/constants";
+import {Notifications} from "../../constants/constants";
 
 let message = '';
 let pagePath = '/';
@@ -26,7 +24,6 @@ function SignInModal() {
 
     function signIn(event) {
         event.preventDefault();
-        // pagePath = '/Feedbacks';
 
         accountService.checkSignInUser(userName, userPassword).then((res) => {
             if (!res) {
@@ -45,7 +42,7 @@ function SignInModal() {
                 if (res.status === 'user') {
                     addToast(Notifications.account.signedIn, {appearance: 'success', autoDismiss: true});
                 } else addToast(Notifications.account.signedInAdmin, {appearance: 'success', autoDismiss: true});
-                closeModel();
+                closeModal();
             }
         });
     }
@@ -54,7 +51,7 @@ function SignInModal() {
         pagePath = '/Feedbacks';
     }
 
-    function closeModel() {
+    function closeModal() {
         setUserName('');
         setUserPassword('');
         setIsOpen(false);
@@ -94,7 +91,7 @@ function SignInModal() {
                     </form>
                     <p className="message">{errorMessage}</p>
                     <button id='modalClose' className="btn btn-primary"
-                            onClick={() => closeModel()}>Close
+                            onClick={() => closeModal()}>Close
                     </button>
                 </div>
             </div>)}

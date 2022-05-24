@@ -1,56 +1,81 @@
 import React, {useState} from 'react'
 import styles from './Modal.scss' // don't delete
 import AccountService from "../../services/AccountService";
+import {Notifications} from "../../constants/constants";
+import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
+import {useDispatch} from "react-redux";
+import StorageService from "../../services/StorageService";
+import {useToasts} from 'react-toast-notifications';
 
 
 function LogInModal() {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [message, setMessage] = useState('');
-
-    const user = {
-        name: '',
-        email: '',
-        password: '',
-        status: 'user'
-    };
+    const [userName, setUserName] = useState('');
+    const [userEmail, setUserEmail] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+    const [userRepeatPassword, setUserRepeatPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const accountService = new AccountService();
+
+    const dispatch = useDispatch();
+    const storageService = new StorageService();
+
+    const {addToast} = useToasts();
 
 
     function addUserToDb(event) {
         event.preventDefault();
-        accountService.addUser(user);
-        // try {
-        //     let data = {
-        //         Name: this.name,
-        //         Email: this.email,
-        //         Password: this.password,
-        //         Status: this.status
-        //     };
-        //     fetch('api/users/AddUser', {
-        //         method: "POST",
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(data)
-        //     })
-        //
-        // } catch (e) {
-        //     this.setState({
-        //         message: 'Such user already exist!',
-        //     })
-        // }
-        // this.setState({
-        //     message: 'You loged in successfully!',
-        // })
+
+        if(userPassword !== userRepeatPassword){
+            setErrorMessage(Notifications.account.passwordsDontMatch);
+            return;
+        }
+
+        const user = {
+            name: userName,
+            email: userEmail,
+            password: userPassword,
+            status: 'user'
+        };
+
+        accountService.addUser(user).then((res) => {
+            if (!res) {
+                setErrorMessage(Notifications.account.userAlreadyExist)
+            } else {
+                const user = {
+                    id: res.id,
+                    name: res.name,
+                    email: res.email,
+                    status: res.status,
+                };
+
+                dispatch(changeIsAuthorize(true, user));
+                storageService.setUser(user);
+
+                if (res.status === 'user') {
+                    addToast(Notifications.account.signedIn, {appearance: 'success', autoDismiss: true});
+                } else addToast(Notifications.account.signedInAdmin, {appearance: 'success', autoDismiss: true});
+                closeModal();
+            }
+        });
+    }
+
+    function closeModal() {
+        setUserName('');
+        setUserEmail('');
+        setUserPassword('');
+        setUserRepeatPassword('');
+        setIsOpen(false);
+        setErrorMessage(null);
     }
 
     return (
         <React.Fragment>
             <button className="btn btn-info btn_login" onClick={() => setIsOpen(true)}>Login</button>
             {isOpen && (<div className="modal">
-                <div className="modal_body_login">
+                <div className="modal_body">
                     <h1 className="mb-20">Login</h1>
                     <form className="contact_us_form" method="POST" onSubmit={(e) => addUserToDb(e)}>
                         <input
@@ -60,7 +85,8 @@ function LogInModal() {
                             maxLength="30"
                             placeholder="Name"
                             required={true}
-                            onInput={(e) => (user.name = e.target.value)}
+                            value={userName}
+                            onChange={(e) => (setUserName(e.target.value))}
                         />
                         <input
                             className="form-control"
@@ -68,7 +94,8 @@ function LogInModal() {
                             name="Email"
                             placeholder="Email"
                             required={true}
-                            onInput={(e) => (user.email = e.target.value)}
+                            value={userEmail}
+                            onChange={(e) => (setUserEmail(e.target.value))}
                         />
                         <input
                             className="form-control"
@@ -76,23 +103,26 @@ function LogInModal() {
                             name="password"
                             placeholder="Password"
                             required={true}
-                            onInput={(e) => (user.password = e.target.value)}
+                            value={userPassword}
+                            onChange={(e) => (setUserPassword(e.target.value))}
                         />
                         <input
                             className="form-control"
                             type="password"
                             name="password"
-                            placeholder="Repeate password"
+                            placeholder="Repeat password"
                             required={true}
+                            value={userRepeatPassword}
+                            onChange={(e) => (setUserRepeatPassword(e.target.value))}
                         />
                         <button type="submit" className="btn_contact_submit">
                             send
                             <img src="assets/icons/arrow_right_submit.svg" alt="send"/>
                         </button>
                     </form>
-                    <p className="message">{message}</p>
+                    <p className="message">{errorMessage}</p>
                     <button id='modalClose' className="btn btn-primary"
-                            onClick={() => setIsOpen(false)}>Close
+                            onClick={() => closeModal()}>Close
                     </button>
                 </div>
             </div>)}

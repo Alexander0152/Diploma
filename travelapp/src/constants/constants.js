@@ -10,11 +10,13 @@ export const MapAccessToken = 'pk.eyJ1IjoieXVyYTI1MDY5MSIsImEiOiJja203emdiMjIxMn
 
 export const Notifications = {
     account: {
+        userAlreadyExist: 'The user with such login or email already exist. Please check the entered data.',
         noSuchUser: 'There are no such user or Name and Password are incorrect. Please check the entered data.',
         rejectUnauthorized: 'Only authorized users can leave comments. Please register or sign in.',
         signedIn: 'Signed in successfully',
         signedInAdmin: 'Signed in as administrator',
-        loggedIn: 'Signed in successfully'
+        loggedIn: 'Signed in successfully',
+        passwordsDontMatch: "Passwords don't match",
     }
 };
 

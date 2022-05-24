@@ -54,6 +54,14 @@ namespace TravelAppServer.Controllers
                 return BadRequest();
             }
 
+            User dBUserByName = await db.Users.FirstOrDefaultAsync(x => x.Name == user.Name);
+            User dBUserByEmail = await db.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
+
+            if (dBUserByName != null || dBUserByEmail != null)
+            {
+                return new ObjectResult(false);
+            }
+
             db.Users.Add(user);
             await db.SaveChangesAsync();    
             return Ok(user);
