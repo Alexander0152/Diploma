@@ -139,32 +139,37 @@ footer {
   color: #e0e0e0;
 }
 
-.contact_us_form fieldset {
-  padding: 0;
-  border-radius: 3px;
-  border: 1px solid #bdbdbd;
-  width: 100%;
-  min-height: 122px;
-  margin-bottom: 15px;
-}
+.contact_us_form {
 
-.contact_us_form legend {
-  font-size: 12px;
-  line-height: 14px;
-  color: #bdbdbd;
-  padding: 0 2px;
-  margin-left: 5px;
-}
+  & fieldset {
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid #bdbdbd;
+    width: 100%;
+    min-height: 122px;
+    margin-bottom: 15px;
+  }
 
-.contact_us_form textarea {
-  height: 100px;
-  border: none;
-  background-color: #333;
-  resize: none;
-  outline: none;
-  font-size: 12px;
-  line-height: 14px;
-  color: #bdbdbd;
+  & legend {
+    font-size: 12px;
+    line-height: 14px;
+    color: #bdbdbd;
+    padding: 0 2px;
+    margin-left: 5px;
+  }
+
+  & textarea {
+    height: 100px;
+    border: none;
+    background-color: #333;
+    resize: none;
+    outline: none;
+    //line-height: 14px;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
 
 .contact_checkbox_container label {

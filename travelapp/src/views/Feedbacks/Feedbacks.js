@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {getSiteFeedbacks} from "../../services/SiteFeedbacksService";
 
 
-const container = {
-    height: '600px'
-}
-const black_text = {
-    color: 'black',
-    fontWeight: 'bold'
-}
 function Feedbacks() {
 
     const [feedbacksList, setFeedbacks] = React.useState([
@@ -17,39 +11,27 @@ function Feedbacks() {
     ]);
 
     useEffect(() => {
-        fetch('/api/feedback', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setFeedbacks(result);
-                }
-            );
+        getSiteFeedbacks().then((res) => setFeedbacks(res));
     }, [])
 
     return (
-        <section className="country_card" style={container}>
+        <section className="country_card siteFeedbacks_container">
             <div className="wrapper">
                 <main className="country-page__container">
-                    <h2 style={black_text}>Feedbacks and suggestions</h2>
+                    <h2 className="title">Feedbacks and suggestions</h2>
                     <table className="table">
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Country</th>
                             <th>Feedback</th>
+                            <th>Date</th>
                         </tr>
                         {feedbacksList.map((item) => {
                             return <tr>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
-                                <td>{item.country}</td>
-                                <td>{item.feedbackText}</td>
+                                <td>{item.text}</td>
+                                <td>{String(item.date).replace('T', ' ')}</td>
                             </tr>
                         })}
                     </table>

@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {store} from '../../businessLayer/Store';
 import {Provider} from 'react-redux';
+import StorageService from "../../services/StorageService";
+import {addSiteFeedback} from "../../services/SiteFeedbacksService";
+import {Link} from "react-router-dom";
 
 function Footer() {
 
@@ -8,27 +11,31 @@ function Footer() {
     const [feedbackEmail, setFeedbackEmail] = React.useState('');
     const [feedbackText, setFeedbackText] = React.useState('');
 
-    function addFeedbackToDb(event) {
+    function addFeedback(event) {
         event.preventDefault();
-        try {
-            let data = {
-                Name: feedbackName,
-                Email: feedbackEmail,
-                Text: feedbackText
-            };
-            fetch('api/feedback/AddFeedback', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
 
-            alert('Feedback send successfully!');
-        } catch (e) {
-            alert('Something goes wrong!');
-        }
-    };
+        const feedback = {
+            Name: feedbackName,
+            Email: feedbackEmail,
+            Text: feedbackText,
+            Date: new Date().toISOString()
+        };
+
+        addSiteFeedback(feedback).then();
+    }
+
+    function clearFie(event) {
+        event.preventDefault();
+
+        const feedback = {
+            Name: feedbackName,
+            Email: feedbackEmail,
+            Text: feedbackText,
+            Date: new Date().toISOString()
+        };
+
+        addSiteFeedback(feedback).then();
+    }
 
     return (
         <footer>
@@ -39,9 +46,15 @@ function Footer() {
                             <div className="logo logo_footer"></div>
                         </a>
                         <ul className="footer_navbar">
-                            <li><a href="/">About</a></li>
-                            <li><a href="/">Countries</a></li>
-                            <li><a href="/">Map</a></li>
+                            <Link to="/">
+                                <li>About</li>
+                            </Link>
+                            <Link to="/">
+                                <li>Countries</li>
+                            </Link>
+                            <Link to="/">
+                                <li>Map</li>
+                            </Link>
                             <li><a href="#contact_us">Contact us</a></li>
                         </ul>
                         <button className="btn_donate_for_volunteers">
@@ -55,13 +68,13 @@ function Footer() {
                         </ul>
                         <span
                             className="contact_us_title">What features do you want to see in the future?</span>
-                        <form className="contact_us_form" method="POST" onSubmit={(e) => addFeedbackToDb(e)}>
+                        <form className="contact_us_form" method="POST" onSubmit={(e) => addFeedback(e)}>
                             <input
                                 className="contact_form_item"
                                 type="text"
                                 name="contactName"
                                 placeholder="Name"
-                                required=""
+                                required={true}
                                 onInput={(e) => (setFeedbackName(e.target.value))}
                             />
                             <input
@@ -69,13 +82,14 @@ function Footer() {
                                 type="email"
                                 name="contactEmail"
                                 placeholder="Email"
-                                required=""
+                                required={true}
                                 onInput={(e) => (setFeedbackEmail(e.target.value))}
                             />
                             <fieldset>
                                 <legend>Please enter your message</legend>
                                 <textarea className="contact_text_area"
-                                          onInput={(e) => (setFeedbackText(e.target.value))}></textarea>
+                                          required={true}
+                                          onInput={(e) => (setFeedbackText(e.target.value))}/>
                             </fieldset>
                             <button type="submit" className="btn_contact_submit">
                                 send

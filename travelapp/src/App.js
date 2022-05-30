@@ -13,6 +13,7 @@ import {Provider} from 'react-redux';
 import Header from "./views/Header/Header";
 import Footer from "./views/Footer/Footer";
 import { ToastProvider } from 'react-toast-notifications';
+import Feedbacks from "./views/Feedbacks/Feedbacks";
 
 const fadeImages = [
     imageHost + '/others/hill.jpg',
@@ -27,10 +28,6 @@ function App() {
         {countryId: 3, countryName: 'France', rating: 5.4, numberOfVoters: 300},
         {countryId: 2, countryName: 'Australia', rating: 8.8, numberOfVoters: 300}
     ]);
-
-    const [feedbackName, setFeedbackName] = useState('');
-    const [feedbackEmail, setFeedbackEmail] = useState('');
-    const [feedbackText, setFeedbackText] = useState('');
 
     function sortByRating() {
         const sorted = [...cards].sort(function (a, b) {
@@ -81,28 +78,6 @@ function App() {
                 }
             );
     }, [])
-
-    function addFeedbackToDb(event) {
-        event.preventDefault();
-        try {
-            let data = {
-                Name: feedbackName,
-                Email: feedbackEmail,
-                Text: feedbackText
-            };
-            fetch('api/feedback/AddFeedback', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-
-            alert('Feedback send successfully!');
-        } catch (e) {
-            alert('Something goes wrong!');
-        }
-    };
 
     function getCardByName(name) {
         return cards.filter(country => country.countryName === name)[0];
@@ -189,6 +164,7 @@ function App() {
                            component={() => <CountryPage country={getCardByName('Switzerland')}/>}/>
                     <Route exact path="/UK" component={() => <CountryPage country={getCardByName('UK')}/>}/>
                     <Route exact path="/USA" component={() => <CountryPage country={getCardByName('USA')}/>}/>
+                    <Route exact path="/Feedbacks" component={() => <Feedbacks/>}/>
                     <a name="contact_us"></a>
                     <Footer/>
                 </div>

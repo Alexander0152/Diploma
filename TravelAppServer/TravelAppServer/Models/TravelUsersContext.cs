@@ -9,6 +9,7 @@ namespace TravelAppServer.Models
         public DbSet<Country> Countries { get; set; }
         public DbSet<CountryInfo> CountryInfo { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<SiteFeedback> SiteFeedbacks { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
 
         public TravelUsersContext(DbContextOptions<TravelUsersContext> options) : base(options)

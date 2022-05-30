@@ -4,6 +4,9 @@ import SignInModal from '../Modal/SigninModal'
 import {useSelector, useDispatch} from 'react-redux';
 import StorageService from "../../services/StorageService";
 import {changeIsAuthorize} from "../../businessLayer/actions/AuthorizeAction";
+import {UserStatus} from "../../constants/constants";
+import CountryCard from "../CountryCards/CountryCard";
+import {Link} from "react-router-dom";
 
 
 function Header() {
@@ -34,11 +37,21 @@ function Header() {
                         <div className="logo"/>
                     </a>
                     <ul className="navbar">
-                        <li className="header_active"><a href="#"></a></li>
-                        <li className="header_active"><a href="#">About</a></li>
-                        <li><a href="/">Countries</a></li>
-                        <li><a href="/">Map</a></li>
+                        <Link to="/">
+                            <li>About</li>
+                        </Link>
+                        <Link to="/">
+                            <li>Countries</li>
+                        </Link>
+                        <Link to="/">
+                            <li>Map</li>
+                        </Link>
                         <li><a href="#contact_us">Contact Us</a></li>
+                        {user.status === UserStatus.ADMIN && (
+                            <Link to="/Feedbacks">
+                                <li><a href="/Feedbacks">Feedbacks</a></li>
+                            </Link>
+                        )}
                     </ul>
                     {isAuthorized && (<><h3 className="user_name">{user.name}</h3>
                         <button className="btn btn-info btn-sign_out" onClick={() => signOut()}>Sign out</button>

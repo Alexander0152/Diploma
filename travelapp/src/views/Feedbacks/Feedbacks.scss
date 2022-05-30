@@ -1,0 +1,41 @@
+.siteFeedbacks_container {
+  //width: 1620px;
+  font-weight: 600;
+
+  .title {
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  table, th, td {
+    border: 1px solid;
+    text-align: left;
+
+    //border-radius: 15px;
+    border-spacing: 0;
+    overflow: hidden;
+  }
+
+  .table {
+    border-collapse: separate;
+    border-radius: 15px;
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+
+  table tr:last-child td:first-child {
+    //border: 2px solid orange;
+    border-bottom-left-radius: 15px;
+  }
+
+  table tr:last-child td:last-child {
+    //border: 2px solid green;
+    border-bottom-right-radius: 15px;
+  }
+
+  th {
+    text-align: center;
+    background-color: #637081;
+    background-image: linear-gradient(315deg, rgba(99, 112, 129, 0.94) 0%, #7c98b3 74%);
+  }
+}
