@@ -69,7 +69,7 @@ namespace TravelAppServer.Controllers
 
             db.Update(country);
             await db.SaveChangesAsync();
-            return Ok(country);
+            return Ok(country); 
         }
         //public async Task<ActionResult<User>> AddUser([FromBody] User user)
         //{

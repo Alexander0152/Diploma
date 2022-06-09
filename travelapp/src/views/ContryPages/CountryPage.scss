@@ -1,0 +1,96 @@
+.country-page__title {
+  font-size: 50px;
+}
+
+.country-page__intro__images {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.country-page__intro__images__first {
+  width: 566px;
+  height: 317px;
+  border-radius: 20px;
+}
+
+.country-page__intro__images__second {
+  width: 521px;
+  height: 293px;
+  border-radius: 20px;
+  position: relative;
+  right: 30px;
+  top: 65px;
+}
+
+.country-page__info__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px;
+  padding-bottom: 30px;
+  margin-top: 80px;
+}
+
+.country-page__info__left {
+  padding-right: 8px;
+}
+
+.country-page__info__content {
+  display: flex;
+  justify-content: center;
+}
+
+.country-page__info__left__text {
+  text-align: left;
+  max-width: 727px;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+
+.country-page__info__left__video {
+  width: 710px;
+  height: 396px;
+}
+
+.country-page__gallery {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.gallery-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.map-container {
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 1080px;
+  height: 656px;
+}
+
+.mapboxgl-map {
+  font: 12px/20px Helvetica Neue, Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.rating li {
+  opacity: 0.8;
+  cursor: pointer;
+  font-size: 50px;
+  color: orange;
+  text-shadow: 1px 1px 2px black;
+}
+
+.rating li.selected {
+  opacity: 1;
+  color: yellow;
+}

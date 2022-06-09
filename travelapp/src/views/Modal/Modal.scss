@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  z-index: 10;
+  color: white;
+
+
+  .modal_body {
+    padding: 2rem;
+    width: 400px;
+    border-radius: 5px;
+    background: linear-gradient(3deg, #afd9f7, #459cf7);
+    height: fit-content;
+  }
+
+  input {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 26px;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .btn_contact_submit {
+    display: flex;
+    line-height: 16px;
+    font-weight: 500;
+    color: green;
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: center;
+    width: 108px;
+    height: 15px;
+    font-size: 15px;
+    margin: 20px 15px 0 auto;
+    outline: none;
+    background: none;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: solid green;
+    border-radius: 5px;
+  }
+
+  .message {
+    color: darkred;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  input {
+    color: black;
+    height: 40px !important;
+    font-weight: 600;
+  }
+}

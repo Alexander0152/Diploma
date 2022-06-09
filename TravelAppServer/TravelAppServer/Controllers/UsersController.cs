@@ -54,9 +54,35 @@ namespace TravelAppServer.Controllers
                 return BadRequest();
             }
 
+            User dBUserByName = await db.Users.FirstOrDefaultAsync(x => x.Name == user.Name);
+            User dBUserByEmail = await db.Users.FirstOrDefaultAsync(x => x.Email == user.Email);
+
+            if (dBUserByName != null || dBUserByEmail != null)
+            {
+                return new ObjectResult(false);
+            }
+
             db.Users.Add(user);
             await db.SaveChangesAsync();    
             return Ok(user);
+        }     
+        
+        [HttpPost("[action]")]
+        public async Task<ActionResult<User>> CheckUser([FromBody] User user)
+        {
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            User dBUser = await db.Users.FirstOrDefaultAsync(x => x.Name == user.Name);
+
+            if (dBUser == null || dBUser.Password != user.Password)
+            {
+                return new ObjectResult(false);
+            }
+
+            return new ObjectResult(dBUser);
         }
 
         // PUT api/users/
